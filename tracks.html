@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>30-Day Devotional Tracks for Men | Burden &amp; Grace</title>
+<meta name="description" content="Ten 30-day Christian devotional tracks for men — loneliness, anger, shame, marriage, money stress, fatherhood, and more. Start with the free 10-day Silent Struggles track.">
+<meta name="keywords" content="devotional tracks for men, 30-day devotional, Christian devotional series, men's devotionals, loneliness devotional, anger devotional, marriage devotional">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://burdenandgrace.com/tracks.html">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Burden &amp; Grace">
+<meta property="og:title" content="30-Day Devotional Tracks for Men | Burden &amp; Grace">
+<meta property="og:description" content="Ten 30-day devotional tracks on the struggles men actually carry. Start with the free 10-day Silent Struggles track.">
+<meta property="og:url" content="https://burdenandgrace.com/tracks.html">
+<meta property="og:image" content="https://burdenandgrace.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="30-Day Devotional Tracks for Men | Burden &amp; Grace">
+<meta name="twitter:description" content="Ten 30-day tracks on the struggles men actually carry. Free 10-day starter — no credit card.">
+<meta name="twitter:image" content="https://burdenandgrace.com/og-image.png">
+<meta name="theme-color" content="#F4EAD5">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=3">
+<script src="waitlist.js" defer></script>
+<style>
+  /* ===== Free-track callout ===== */
+  .free-track {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 40px;
+    background: linear-gradient(135deg, var(--cream) 0%, #FAF4E5 100%);
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 16px;
+    padding: 44px 48px;
+    margin: 0 0 20px;
+    box-shadow: 0 6px 24px rgba(62,43,31,0.06);
+  }
+  .free-tag {
+    display: inline-block;
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.4);
+    border-radius: 999px;
+    padding: 5px 12px;
+    margin-bottom: 16px;
+  }
+  .free-track h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 500;
+    font-size: 34px;
+    color: var(--coffee);
+    margin: 0 0 10px;
+    line-height: 1.1;
+  }
+  .free-track p {
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--coffee-soft);
+    max-width: 560px;
+    margin: 0 0 24px;
+  }
+  .free-track-visual {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .free-track-dot {
+    width: 12px; height: 12px; border-radius: 999px;
+    background: var(--gold);
+    opacity: 0.85;
+  }
+  .free-track-dot:nth-child(1) { opacity: 1; }
+  .free-track-dot:nth-child(n+6) { opacity: 0.4; }
+  /* ===== Compact 4-phase arc ===== */
+  .arc-compact {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin: 10px 0 0;
+    position: relative;
+  }
+  .arc-compact::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 12.5%;
+    right: 12.5%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(201,168,76,0.5) 15%, rgba(201,168,76,0.5) 85%, transparent);
+    z-index: 0;
+  }
+  .phase-compact {
+    position: relative;
+    z-index: 1;
+    padding: 0 12px;
+    text-align: center;
+  }
+  .phase-compact .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px; height: 48px;
+    border-radius: 999px;
+    background: var(--cream);
+    border: 1.5px solid var(--gold);
+    color: var(--gold);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 14px;
+  }
+  .phase-compact .label {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 17px;
+    color: var(--coffee);
+    margin: 0;
+  }
+  .phase-compact .sub {
+    font-size: 12px;
+    color: var(--coffee-soft);
+    margin: 4px 0 0;
+    line-height: 1.4;
+  }
+  /* ===== Track list ===== */
+  .track-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 10px;
+  }
+  .track-card {
+    background: var(--cream);
+    border: 1px solid rgba(62,43,31,0.1);
+    border-radius: 14px;
+    padding: 28px 30px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform .2s, border-color .2s, box-shadow .2s;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+  .track-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--gold);
+    box-shadow: 0 8px 22px rgba(62,43,31,0.08);
+  }
+  .track-num {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--gold);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    padding-top: 2px;
+  }
+  .track-meta {
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--bronze);
+    margin: 0 0 6px;
+    font-weight: 500;
+  }
+  .track-card h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 500;
+    font-size: 23px;
+    color: var(--coffee);
+    margin: 0 0 10px;
+    line-height: 1.2;
+  }
+  .track-card p {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--coffee-soft);
+    margin: 0;
+  }
+  /* ===== What unlocks section ===== */
+  .unlock-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 30px;
+  }
+  .unlock-item {
+    background: var(--cream);
+    border: 1px solid rgba(62,43,31,0.08);
+    border-radius: 12px;
+    padding: 28px 24px;
+  }
+  .unlock-item .check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px; height: 32px;
+    border-radius: 999px;
+    background: rgba(201,168,76,0.15);
+    color: var(--gold);
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+  .unlock-item h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 19px;
+    font-weight: 500;
+    color: var(--coffee);
+    margin: 0 0 8px;
+  }
+  .unlock-item p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--coffee-soft);
+    margin: 0;
+  }
+  @media (max-width: 900px) {
+    .free-track { grid-template-columns: 1fr; padding: 32px 28px; gap: 24px; }
+    .free-track-visual { justify-content: flex-start; }
+    .arc-compact { grid-template-columns: repeat(2, 1fr); row-gap: 30px; }
+    .arc-compact::before { display: none; }
+    .track-list { grid-template-columns: 1fr; }
+    .unlock-grid { grid-template-columns: 1fr; gap: 14px; }
+  }
+  @media (max-width: 600px) {
+    .free-track { padding: 28px 22px; }
+    .free-track h2 { font-size: 28px; }
+    .track-card { grid-template-columns: 52px 1fr; gap: 16px; padding: 24px 22px; }
+    .track-num { font-size: 34px; }
+  }
+</style>
+<!-- ============ JSON-LD STRUCTURED DATA ============ -->
+<!-- CollectionPage + ItemList of the 10 devotional tracks.
+     Lets search + AI answer engines understand that this page is a catalog
+     of 30-day devotional series, each on a named struggle. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://burdenandgrace.com/tracks.html#page",
+  "url": "https://burdenandgrace.com/tracks.html",
+  "name": "30-Day Devotional Tracks for Men",
+  "description": "Ten 30-day Christian devotional tracks for men — each focused on a single struggle, walked through in four phases: Name it, Pray it, Let it out, Walk it.",
+  "inLanguage": "en-US",
+  "isPartOf": { "@id": "https://burdenandgrace.com/#website" },
+  "about": {
+    "@type": "Thing",
+    "name": "Christian devotionals for men",
+    "description": "Daily devotional readings addressing loneliness, anger, shame, marriage distance, money stress, fatherhood, hidden sin, and spiritual inconsistency."
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "name": "Devotional Tracks",
+    "numberOfItems": 11,
+    "itemListOrder": "https://schema.org/ItemListOrderAscending",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Course",
+          "name": "Silent Struggles",
+          "description": "A free 10-day introductory devotional on ten weights men typically carry in silence. No credit card required.",
+          "provider": { "@id": "https://burdenandgrace.com/#organization" },
+          "isAccessibleForFree": true,
+          "educationalLevel": "All levels",
+          "audience": { "@type": "Audience", "audienceType": "Christian men" },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          },
+          "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseMode": "online",
+            "courseWorkload": "PT5M"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Course",
+          "name": "Carrying the Weight All Alone",
+          "description": "A 30-day devotional for men who feel they have no one to share what they are carrying.",
+          "provider": { "@id": "https://burdenandgrace.com/#organization" },
+          "audience": { "@type": "Audience", "audienceType": "Christian men" },
+          "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "online", "courseWorkload": "PT5M" }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Course",
+          "name": "Anger Under Pressure",
+          "description": "A 30-day devotional for men whose anger keeps leaking out in places they don't want it to.",
+          "provider": { "@id": "https://burdenandgrace.com/#organization" },
+          "audience": { "@type": "Audience", "audienceType": "Christian men" },
+          "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "online", "courseWorkload": "PT5M" }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "Course",
+          "name": "Money Stress and Never Enough",
+          "description": "A 30-day devotional for men carrying the weight of providing and the feeling that it's never enough.",
+          "provider": { "@id": "https://burdenandgrace.com/#organization" },
+          "audience": { "@type": "Audience", "audienceType": "Christian men" },
+          "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "online", "courseWorkload": "PT5M" }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "Course",
+          "name": "Surrounded by People, Known by None",
+          "description": "A 30-day devotional on loneliness inside a full life — being around people every day without being truly known.",
+          "provider": { "@id": "https://burdenandgrace.com/#organization" },
+          "audience": { "@type": "Audience", "audienceType": "Christian men" },
+          "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "online", "courseWorkload": "PT5M" }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "Course",
+          "name": "Physically Present, Emotionally Gone",
+          "description": "A 30-day devotional for men who are there in the room but absent everywhere that matters.",
+          "provider": { "@id": "https://burdenandgrace.com/#organization" },
+          "audience": { "@type": "Audience", "audienceType": "Christian men" },
+          "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "online", "courseWorkload": "PT5M" }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "Course",
+          "name": "Fatherhood and Failing",
+          "description": "A 30-day devotional for fathers who feel like they are getting it wrong more than right.",
+          "provider": { "@id": "https://burdenandgrace.com/#organization" },
+          "audience": { "@type": "Audience", "audienceType": "Christian fathers" },
+          "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "online", "courseWorkload": "PT5M" }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "Course",
+          "name": "The Failure You Keep Replaying",
+          "description": "A 30-day devotional for men stuck on a past failure that keeps running on a loop.",
+          "provider": { "@id": "https://burdenandgrace.com/#organization" },
+          "audience": { "@type": "Audience", "audienceType": "Christian men" },
+          "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "online", "courseWorkload": "PT5M" }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "Course",
+          "name": "Hidden Sin, Shame, and Secrets",
+          "description": "A 30-day devotional on the weight of things no one knows — and the grace that holds even those.",
+          "provider": { "@id": "https://burdenandgrace.com/#organization" },
+          "audience": { "@type": "Audience", "audienceType": "Christian men" },
+          "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "online", "courseWorkload": "PT5M" }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "Course",
+          "name": "Distance in Marriage",
+          "description": "A 30-day devotional for husbands who feel their marriage quietly drifting.",
+          "provider": { "@id": "https://burdenandgrace.com/#organization" },
+          "audience": { "@type": "Audience", "audienceType": "Christian husbands" },
+          "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "online", "courseWorkload": "PT5M" }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "Course",
+          "name": "Spiritually Inconsistent and Stuck",
+          "description": "A 30-day devotional for men whose walk with God has felt stop-and-start and stale.",
+          "provider": { "@id": "https://burdenandgrace.com/#organization" },
+          "audience": { "@type": "Audience", "audienceType": "Christian men" },
+          "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "online", "courseWorkload": "PT5M" }
+        }
+      }
+    ]
+  }
+}
+</script>
+</head>
+<body>
+<nav class="site-nav">
+  <a class="brand" href="index.html">
+    <svg class="brand-mark" viewBox="0 0 400 400" aria-hidden="true">
+      <g stroke="#C9A84C" fill="none" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M 108 218 L 172 88 L 197 155" stroke-width="14"/>
+        <path d="M 197 155 L 220 58 L 277 200" stroke-width="14"/>
+        <line x1="220" y1="20" x2="220" y2="62" stroke-width="11"/>
+        <line x1="207" y1="34" x2="233" y2="34" stroke-width="11"/>
+      </g>
+      <g transform="translate(60 130)">
+        <path d="M 218 70 A 105 105 0 1 0 218 210 L 218 150 L 140 150" stroke="#C9A84C" stroke-width="18" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </svg>
+    <span class="brand-word">BURDEN<span class="amp">&amp;</span>GRACE</span>
+  </a>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+    <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+      <line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/>
+    </svg>
+    <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+      <line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/>
+    </svg>
+  </button>
+  <div class="nav-links" id="nav-links">
+    <a href="tracks.html" aria-current="page">Tracks</a>
+    <

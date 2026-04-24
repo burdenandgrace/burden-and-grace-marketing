@@ -1,0 +1,299 @@
+/* ============================================================
+   Burden & Grace — shared site styles
+   Used by index.html, tracks.html, pricing.html, about.html
+   ============================================================ */
+
+:root {
+  --cream: #F4EBD8;
+  --cream-deep: #EADFC5;
+  --coffee: #3E2B1F;
+  --coffee-soft: #5C4033;
+  --bronze: #8B6F47;
+  --gold: #C9A84C;
+  --ink: #2A1D13;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Inter", -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: inherit; }
+
+/* ===== Top nav (shared) ===== */
+nav.site-nav {
+  padding: 22px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--cream);
+  position: relative;
+  z-index: 20;
+}
+nav.site-nav.overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  background: transparent;
+}
+.brand {
+  display: flex; align-items: center;
+  gap: 14px;
+  color: var(--coffee);
+  text-decoration: none;
+}
+.brand-mark { width: 44px; height: 44px; display: block; flex-shrink: 0; }
+.brand-word {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 22px;
+  letter-spacing: 0.2em;
+  font-weight: 500;
+}
+.brand-word .amp {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  color: var(--gold);
+  padding: 0 4px;
+  font-weight: 400;
+}
+.nav-links {
+  display: flex;
+  gap: 28px;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--coffee-soft);
+}
+.nav-links a {
+  color: inherit;
+  text-decoration: none;
+  transition: color .25s;
+  position: relative;
+  padding-bottom: 2px;
+  white-space: nowrap;
+}
+.nav-links a:hover { color: var(--coffee); }
+.nav-links a[aria-current="page"] {
+  color: var(--coffee);
+}
+.nav-links a[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -4px;
+  height: 1px;
+  background: var(--gold);
+}
+
+/* ===== Mobile nav hamburger (hidden by default) ===== */
+.nav-toggle {
+  display: none;
+  width: 42px; height: 42px;
+  background: transparent;
+  border: 1px solid rgba(62,43,31,0.18);
+  border-radius: 8px;
+  padding: 0;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  color: var(--coffee);
+  transition: background .2s, border-color .2s;
+}
+.nav-toggle:hover {
+  background: rgba(62,43,31,0.04);
+  border-color: rgba(62,43,31,0.3);
+}
+.nav-toggle svg { width: 20px; height: 20px; display: block; }
+.nav-toggle .icon-close { display: none; }
+.nav-toggle[aria-expanded="true"] .icon-open { display: none; }
+.nav-toggle[aria-expanded="true"] .icon-close { display: block; }
+nav.site-nav.overlay .nav-toggle {
+  border-color: rgba(62,43,31,0.22);
+}
+
+/* ===== Shared section plumbing ===== */
+section.block {
+  padding: 110px 32px;
+  border-top: 1px solid rgba(62,43,31,0.08);
+}
+section.block.alt { background: var(--cream-deep); }
+section.block.dark {
+  background: var(--ink);
+  color: var(--cream);
+  border-top-color: rgba(244,235,216,0.08);
+}
+.container { max-width: 1100px; margin: 0 auto; }
+.container.narrow { max-width: 760px; }
+
+.eyebrow {
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--bronze);
+  margin: 0 0 18px;
+  font-weight: 500;
+}
+section.block.dark .eyebrow { color: var(--gold); }
+
+section.block h1,
+section.block h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(30px, 4.2vw, 46px);
+  line-height: 1.15;
+  color: var(--coffee);
+  margin: 0 0 22px;
+  letter-spacing: -0.005em;
+}
+section.block.dark h1,
+section.block.dark h2 { color: var(--cream); }
+section.block h1 em,
+section.block h2 em { color: var(--gold); font-style: italic; }
+
+section.block h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 500;
+  color: var(--coffee);
+}
+section.block.dark h3 { color: var(--cream); }
+
+section.block p.lead {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--coffee-soft);
+  max-width: 620px;
+  margin: 0 0 40px;
+}
+section.block.dark p.lead { color: rgba(244,235,216,0.78); }
+
+section.block.center { text-align: center; }
+section.block.center .eyebrow,
+section.block.center p.lead { margin-left: auto; margin-right: auto; }
+
+/* ===== Page hero (non-animated, used on tracks/pricing/about) ===== */
+.page-hero {
+  padding: 80px 32px 60px;
+  text-align: center;
+  background: var(--cream);
+  border-bottom: 1px solid rgba(62,43,31,0.08);
+}
+.page-hero .eyebrow { margin-bottom: 14px; }
+.page-hero h1 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(36px, 5.2vw, 60px);
+  line-height: 1.1;
+  color: var(--coffee);
+  margin: 0 0 18px;
+  letter-spacing: -0.01em;
+}
+.page-hero h1 em { color: var(--gold); font-style: italic; }
+.page-hero p {
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--coffee-soft);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* ===== Buttons / CTA ===== */
+.cta {
+  background: var(--coffee);
+  color: var(--cream);
+  border: none;
+  padding: 17px 34px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: transform .2s, background .2s;
+  text-decoration: none;
+  display: inline-block;
+}
+.cta:hover { background: var(--ink); transform: translateY(-1px); }
+.cta.secondary {
+  background: transparent;
+  color: var(--coffee);
+  border: 1px solid var(--coffee);
+}
+.cta.secondary:hover { background: rgba(62,43,31,0.06); }
+.cta.large { padding: 18px 36px; font-size: 13px; }
+
+section.block.dark .cta { background: var(--cream); color: var(--ink); }
+section.block.dark .cta:hover { background: var(--gold); color: var(--ink); }
+section.block.dark .cta.secondary {
+  background: transparent;
+  color: var(--cream);
+  border-color: rgba(244,235,216,0.45);
+}
+section.block.dark .cta.secondary:hover {
+  background: rgba(244,235,216,0.08);
+  color: var(--cream);
+  border-color: var(--cream);
+}
+
+.cta-row {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.fine {
+  font-size: 12px;
+  color: var(--coffee-soft);
+  letter-spacing: 0.08em;
+  margin-top: 14px;
+}
+section.block.dark .fine { color: rgba(244,235,216,0.55); }
+
+/* ===== Footer (shared) ===== */
+footer.site-footer {
+  background: var(--ink);
+  color: rgba(244,235,216,0.7);
+  padding: 60px 32px 40px;
+  border-top: 1px solid rgba(244,235,216,0.08);
+}
+footer.site-footer .container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 40px;
+}
+.foot-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--cream);
+  text-decoration: none;
+}
+.foot-brand .brand-mark { width: 36px; height: 36px; }
+.foot-brand .brand-word {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  letter-spacing: 0.22em;
+  font-weight: 500;
+  color: var(--cream);
+}
+.foot-brand .brand-word .amp {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  color: var(--gold);
+  padding: 0 4px;
+  font-weight: 400;
+}
+.foot-links {
+  display: flex;
+  gap: 28px;
+  font-size: 12px;
+  letter-spaci

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About Burden &amp; Grace — A Christian Devotional App Built on Matthew 11:28</title>
+<meta name="description" content="Burden &amp; Grace is a five-minute morning devotional for Christian men, built on Matthew 11:28. A quiet room, a Bible, and a place to put down what's been weighing on you.">
+<meta name="keywords" content="about Burden and Grace, Christian devotional app for men, Matthew 11:28 app, men's devotional why">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://burdenandgrace.com/about.html">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Burden &amp; Grace">
+<meta property="og:title" content="About Burden &amp; Grace — A Christian Devotional Built on Matthew 11:28">
+<meta property="og:description" content="Five minutes a morning. One verse. A journal that won't shame you. Built for Christian men who are tired of carrying.">
+<meta property="og:url" content="https://burdenandgrace.com/about.html">
+<meta property="og:image" content="https://burdenandgrace.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About Burden &amp; Grace — A Christian Devotional Built on Matthew 11:28">
+<meta name="twitter:description" content="Why Burden &amp; Grace exists, who it's for, and how it's different from the usual Christian app.">
+<meta name="twitter:image" content="https://burdenandgrace.com/og-image.png">
+<meta name="theme-color" content="#F4EAD5">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=3">
+<script src="waitlist.js" defer></script>
+<style>
+  /* ===== About-page narrative ===== */
+  .prose h2 {
+    max-width: 720px;
+  }
+  .prose p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--coffee-soft);
+    margin: 0 0 22px;
+    max-width: 680px;
+  }
+  .prose p:first-of-type::first-letter {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 3em;
+    float: left;
+    line-height: 0.9;
+    padding: 6px 10px 0 0;
+    color: var(--gold);
+    font-weight: 500;
+  }
+  .pull {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(22px, 2.8vw, 30px);
+    line-height: 1.45;
+    color: var(--coffee);
+    border-left: 2px solid var(--gold);
+    padding-left: 28px;
+    margin: 40px 0;
+    max-width: 680px;
+  }
+  /* ===== Voice principle cards ===== */
+  .voice-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-top: 10px;
+  }
+  .voice-card {
+    background: var(--cream);
+    border: 1px solid rgba(62,43,31,0.08);
+    border-radius: 14px;
+    padding: 32px 30px;
+  }
+  .voice-card .tag {
+    display: inline-block;
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.35);
+    border-radius: 999px;
+    padding: 5px 12px;
+    margin-bottom: 16px;
+  }
+  .voice-card h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--coffee);
+    margin: 0 0 12px;
+    line-height: 1.2;
+  }
+  .voice-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--coffee-soft);
+    margin: 0 0 14px;
+  }
+  .voice-card p:last-child { margin-bottom: 0; }
+  .voice-card em {
+    font-style: italic;
+    color: var(--coffee);
+  }
+  /* ===== Promises list ===== */
+  .promises {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 36px;
+    margin-top: 10px;
+    max-width: 900px;
+  }
+  .promise {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--coffee);
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(62,43,31,0.06);
+  }
+  .promise .mark {
+    color: var(--gold);
+    font-size: 18px;
+    font-weight: 500;
+    flex-shrink: 0;
+    width: 20px;
+  }
+  /* ===== Built-by card ===== */
+  .builder {
+    background: var(--cream-deep);
+    border-radius: 16px;
+    padding: 42px 44px;
+    max-width: 780px;
+  }
+  .builder h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 500;
+    font-size: 26px;
+    color: var(--coffee);
+    margin: 0 0 14px;
+  }
+  .builder p {
+    font-size: 15.5px;
+    line-height: 1.75;
+    color: var(--coffee-soft);
+    margin: 0 0 16px;
+  }
+  .builder p:last-child { margin-bottom: 0; }
+  @media (max-width: 900px) {
+    .voice-grid { grid-template-columns: 1fr; gap: 16px; }
+    .promises { grid-template-columns: 1fr; gap: 0; }
+    .builder { padding: 32px 28px; }
+  }
+</style>
+<!-- ============ JSON-LD STRUCTURED DATA ============ -->
+<!-- AboutPage describes the "why" of the product. This helps AI answer
+     engines when someone asks "what is Burden and Grace / who made it /
+     why was it made" — they pull the description straight from here. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": "https://burdenandgrace.com/about.html#page",
+  "url": "https://burdenandgrace.com/about.html",
+  "name": "About Burden & Grace",
+  "description": "Burden & Grace is a Christian devotional app for men, built around Matthew 11:28: 'Come to me, all you who are weary and burdened, and I will give you rest.' It pairs a short daily devotional with a clean Bible reader and an append-only journal — a five-minute morning companion for men who are tired of carrying.",
+  "inLanguage": "en-US",
+  "isPartOf": { "@id": "https://burdenandgrace.com/#website" },
+  "mainEntity": { "@id": "https://burdenandgrace.com/#organization" },
+  "mentions": [
+    {
+      "@type": "Quotation",
+      "text": "Come to me, all you who are weary and burdened, and I will give you rest.",
+      "spokenByCharacter": "Jesus of Nazareth",
+      "citation": "Matthew 11:28"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<nav class="site-nav">
+  <a class="brand" href="index.html">
+    <svg class="brand-mark" viewBox="0 0 400 400" aria-hidden="true">
+      <g stroke="#C9A84C" fill="none" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M 108 218 L 172 88 L 197 155" stroke-width="14"/>
+        <path d="M 197 155 L 220 58 L 277 200" stroke-width="14"/>
+        <line x1="220" y1="20" x2="220" y2="62" stroke-width="11"/>
+        <line x1="207" y1="34" x2="233" y2="34" stroke-width="11"/>
+      </g>
+      <g transform="translate(60 130)">
+        <path d="M 218 70 A 105 105 0 1 0 218 210 L 218 150 L 140 150" stroke="#C9A84C" stroke-width="18" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </svg>
+    <span class="brand-word">BURDEN<span class="amp">&amp;</span>GRACE</span>
+  </a>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+    <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+      <line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/>
+    </svg>
+    <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+      <line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/>
+    </svg>
+  </button>
+  <div class="nav-links" id="nav-links">
+    <a href="tracks.html">Tracks</a>
+    <a href="about.html" aria-current="page">About</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="#" data-waitlist="sign_in">Sign in</a>
+  </div>
+</nav>
+<!-- ============ PAGE HERO ============ -->
+<header class="page-hero">
+  <p class="eyebrow">About</p>
+  <h1>Built for the man who is <em>tired</em> of carrying.</h1>
+  <p>Not tired of work. Tired of carrying. The weight that doesn't show up on a to-do list — the one you wake up with at 5 a.m. before the alarm.</p>
+</header>
+<!-- ============ THE WHY ============ -->
+<section class="block prose">
+  <div class="container narrow">
+    <p class="eyebrow">The why</p>
+    <h2>Most men never say it out loud.</h2>
+    <p>They carry the weight of the job, the weight of the marriage, the weight of being the one everyone else leans on. They carry a failure from ten years ago that still plays at 2 a.m. in the morning. They carry anger they can't explain and shame they can't outrun. They carry it quietly, and they carry it alone.</p>
+    <p>Burden and Grace is a five-minute morning space for those men. It isn't a program to finish. It isn't a seven-step plan. It isn't a Bible app trying to turn scripture into a streak.</p>
+    <p>It's a quiet room — before the day consumes you — where one verse and one honest reflection meet you in the thing you've been carrying, and you get to put some of it down.</p>
+    <blockquote class="pull">
+      "Come to me, all you who are weary and burdened, and I will give you rest."
+      <br/><span style="font-size: 13px; font-style: normal; letter-spacing: 0.18em; text-transform: uppercase; color: var(--bronze); display: block; margin-top: 18px; font-family: 'Inter', sans-serif;">&mdash; Matthew 11:28</span>
+    </blockquote>
+    <p>That verse is the whole thesis of the app. Everything inside it is built to help a man actually go to the One who promised the rest — not build him a better productivity system.</p>
+  </div>
+</section>
+<!-- ============ VOICE PRINCIPLE ============ -->
+<section class="block">
+  <div class="container">
+    <p class="eyebrow">How we speak</p>
+    <h2>Firm about what's true. Gentle about what you do.</h2>
+    <p class="lead">A devotional meets a man in his private morning. The voice matters. So we keep two rules — one for the gospel, one for the application.</p>
+    <div class="voice-grid">
+      <div class="voice-card">
+        <span class="tag">Firm</span>
+        <h3>What God has done.</h3>
+        <p>The receipt is nailed to the cross. The case is closed.</p>
+        <p>These are declarations, not suggestions. A man doesn't need softened gospel — he needs a rock to stand on before he decides what to do next.</p>
+      </div>
+      <div class="voice-card">
+        <span class="tag">Gentle</span>
+        <h3>What you might do.</h3>
+        <p>Here is a step worth trying. Notice what stirs. Follow it if the Spirit confirms.</p>
+        <p>These are invitations, not commands. You know your marriage, your job, your life. The Spirit convicts. The devotional only points.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ WHAT WE WON'T DO ============ -->
+<section class="block alt">
+  <div class="container">
+    <p class="eyebrow">Promises, written down</p>
+    <h2>A short list of things we won't do.</h2>
+    <p class="lead">An app for tired men should probably keep a few things off the table. These are ours.</p>
+    <div class="promises">
+      <div class="promise"><span class="mark">&mdash;</span>No streaks designed to shame you.</div>
+      <div class="promise"><span class="mark">&mdash;</span>No algorithm tuning your scroll.</div>
+      <div class="promise"><span class="mark">&mdash;</span>No ads.</div>
+      <div class="promise"><span class="mark">&mdash;</span>No journal entry you wrote yesterday being re-writable today.</div>
+      <div class="promise"><span class="mark">&mdash;</span>No upsells inside a track.</div>
+      <div class="promise"><span class="mark">&mdash;</span>No "beast mode."</div>
+      <div class="promise"><span class="mark">&mdash;</span>No hustle language pretending to be discipleship.</div>
+      <div class="promise"><span class="mark">&mdash;</span>No performance-dressed-up-as-obedience.</div>
+    </div>
+  </div>
+</section>
+<!-- ============ WHO BUILT THIS ============ -->
+<section class="block">
+  <div class="container narrow">
+    <p class="eyebrow">Who built this</p>
+    <h2>One man. One idea. One morning at a time.</h2>
+    <div class="builder">
+      <p>Burden and Grace was built by a Christian man who needed something that met him at 6 a.m. with a verse, a short reflection, and a place to put down what he was carrying — without turning the whole thing into a leaderboard.</p>
+      <p>So he built it. For himself, first. Then for other men who were carrying the same kind of thing quietly.</p>
+      <p>It isn't a parachurch ministry. It isn't a substitute for your local church. It's a five-minute companion — small and honest on purpose, built by someone who needed it too.</p>
+    </div>
+  </div>
+</section>
+<!-- ============ CLOSING ============ -->
+<se

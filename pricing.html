@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing — Founding Member Access for the First 300 | Burden &amp; Grace</title>
+<meta name="description" content="Founding pricing for Burden &amp; Grace: $1.99/mo or $17.99/yr, locked for life, limited to the first 300 members. Standard $3.99/mo or $39.99/yr after. Free 10-day track, always free.">
+<meta name="keywords" content="Burden and Grace pricing, Christian devotional app subscription, founding member pricing, men's devotional app cost">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://burdenandgrace.com/pricing.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Burden &amp; Grace">
+<meta property="og:title" content="Pricing — Founding Member Access for the First 300 | Burden &amp; Grace">
+<meta property="og:description" content="Founding pricing ($1.99/mo or $17.99/yr) for the first 300 members, locked for life. One subscription unlocks everything.">
+<meta property="og:url" content="https://burdenandgrace.com/pricing.html">
+<meta property="og:image" content="https://burdenandgrace.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pricing — Founding Member Access for the First 300">
+<meta name="twitter:description" content="$1.99/mo or $17.99/yr, locked for life — limited to the first 300. One subscription unlocks everything.">
+<meta name="twitter:image" content="https://burdenandgrace.com/og-image.png">
+
+<meta name="theme-color" content="#F4EAD5">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=3">
+<script src="waitlist.js" defer></script>
+<style>
+  /* ===== Tier grid ===== */
+  .tier-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+    margin-top: 10px;
+  }
+  .tier {
+    position: relative;
+    background: var(--cream);
+    border: 1px solid rgba(62,43,31,0.1);
+    border-radius: 18px;
+    padding: 42px 38px;
+    display: flex;
+    flex-direction: column;
+  }
+  .tier.founding {
+    border-color: rgba(201,168,76,0.55);
+    background: linear-gradient(160deg, var(--cream) 0%, #FAF4E5 100%);
+    box-shadow: 0 10px 30px rgba(201,168,76,0.12);
+  }
+  .tier-badge {
+    position: absolute;
+    top: -12px;
+    left: 38px;
+    background: var(--gold);
+    color: var(--ink);
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 999px;
+  }
+  .tier-eyebrow {
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--bronze);
+    margin: 0 0 12px;
+    font-weight: 500;
+  }
+  .tier h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: var(--coffee);
+    margin: 0 0 8px;
+    line-height: 1.1;
+    letter-spacing: -0.005em;
+  }
+  .tier .tier-sub {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--coffee-soft);
+    margin: 0 0 28px;
+    max-width: 420px;
+  }
+  .price-stack {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 28px;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+  .price-stack .price {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 44px;
+    color: var(--gold);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+  .tier:not(.founding) .price-stack .price { color: var(--coffee); }
+  .price-stack .unit {
+    display: inline-block;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--coffee-soft);
+    margin-left: 6px;
+    font-weight: 400;
+  }
+  .price-note {
+    font-size: 13px;
+    color: var(--bronze);
+    font-style: italic;
+    margin: -16px 0 24px;
+  }
+  .tier ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px;
+  }
+  .tier ul li {
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--coffee);
+    padding: 10px 0 10px 28px;
+    position: relative;
+    border-bottom: 1px solid rgba(62,43,31,0.06);
+  }
+  .tier ul li:last-child { border-bottom: none; }
+  .tier ul li::before {
+    content: "\2713";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    color: var(--gold);
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .tier .cta { align-self: flex-start; }
+
+  /* ===== Web vs app subscription callout ===== */
+  .channel-card {
+    background: linear-gradient(155deg, var(--cream-deep) 0%, #E5D7B7 100%);
+    border: 1px solid rgba(201,168,76,0.4);
+    border-radius: 18px;
+    padding: 42px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .channel-card::before {
+    content: "";
+    position: absolute;
+    top: 0; right: 0;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle at 70% 30%, rgba(201,168,76,0.18), transparent 70%);
+    pointer-events: none;
+  }
+  .channel-card .save-tag {
+    display: inline-block;
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink);
+    background: var(--gold);
+    border-radius: 999px;
+    padding: 6px 14px;
+    margin-bottom: 18px;
+    font-weight: 600;
+  }
+  .channel-card h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(26px, 3.6vw, 36px);
+    color: var(--coffee);
+    margin: 0 0 14px;
+    line-height: 1.15;
+    letter-spacing: -0.005em;
+  }
+  .channel-card h2 em { color: var(--gold); font-style: italic; }
+  .channel-card > p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--coffee-soft);
+    max-width: 680px;
+    margin: 0 0 30px;
+  }
+  .channel-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 0 0 28px;
+  }
+  .channel-col {
+    background: rgba(255,255,255,0.55);
+    border: 1px solid rgba(62,43,31,0.08);
+    border-radius: 12px;
+    padding: 24px 26px;
+  }
+  .channel-col.featured {
+    background: var(--cream);
+    border-color: rgba(201,168,76,0.55);
+  }
+  .channel-col h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--coffee);
+    margin: 0 0 6px;
+  }
+  .channel-col .channel-where {
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--bronze);
+    margin: 0 0 14px;
+    font-weight: 500;
+  }
+  .channel-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .channel-col ul li {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--coffee-soft);
+    padding: 6px 0 6px 22px;
+    position: relative;
+  }
+  .channel-col ul li::before {
+    content: "\2022";
+    position: absolute;
+    left: 4px;
+    color: var(--gold);
+    font-weight: 600;
+  }
+  .channel-note {
+    font-size: 13px;
+    color: var(--bronze);
+    font-style: italic;
+    margin: 0;
+    max-width: 680px;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 720px) {
+    .channel-card { padding: 32px 26px; }
+    .channel-row { grid-template-columns: 1fr; gap: 14px; }
+  }
+
+  /* ===== The 300 explainer ===== */
+  .why-300 {
+    background: var(--cream-deep);
+    border-radius: 16px;
+    padding: 40px 44px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+  .why-300 .count {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 96px;
+    font-style: italic;
+    color: var(--gold);
+    line-height: 1;
+    font-weight: 500;
+  }
+  .why-300 h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 500;
+    font-size: 26px;
+    color: var(--coffee);
+    margin: 0 0 10px;
+  }
+  .why-300 p {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: var(--coffee-soft);
+    margin: 0;
+    max-width: 560px;
+  }
+
+  /* ===== FAQ ===== */
+  .faq-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+    margin-top: 10px;
+    border-top: 1px solid rgba(62,43,31,0.08);
+  }
+  .faq-item {
+    border-bottom: 1px solid rgba(62,43,31,0.08);
+    padding: 24px 4px;
+  }
+  .faq-item h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: var(--coffee);
+    margin: 0 0 10px;
+  }
+  .faq-item p {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: var(--coffee-soft);
+    margin: 0;
+    max-width: 780px;
+  }
+
+  @media (max-width: 900px) {
+    .tier-grid { grid-template-columns: 1fr; gap: 38px; }
+    .tier { padding: 36px 28px; }
+    .why-300 { grid-template-columns: 1fr; text-align: center; padding: 32px 28px; }
+    .why-300 .count { font-size: 72px; }
+  }
+</style>
+
+<!-- ============ JSON-LD STRUCTURED DATA ============ -->
+<!-- Two schemas on this page:
+     1. FAQPage — so the Q&A block is eligible for rich answer snippets in
+        Google AND is the exact structure ChatGPT/Perplexity/Gemini parse
+        when answering "how much does Burden and Grace cost / can I cancel
+        / is it free" — this is our highest-leverage AEO signal.
+     2. Product + AggregateOffer — tells search engines the app is a
+        purchasable product with a price range, eligible for rich price
+        snippets. -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://burdenandgrace.com/pricing.html#faq",
+  "url": "https://burdenandgrace.com/pricing.html",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is anything really free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The ten-day Silent Struggles track, the full Bible reader, the journal, verse highlighting, and bookmarking are free, forever, for everyone. Create a free account in under a minute and you're in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when the 300 founding-member cap is reached?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Founding pricing goes away for new sign-ups. Men who joined as founding members keep their price as long as they remain subscribed. Standard pricing — $3.99/mo or $39.99/yr — becomes the default going forward."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I cancel anytime?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. There's no contract and no lock-in. If you cancel, access continues through the end of the billing period you already paid for. No guilt calls, no retention dark-patterns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a per-track option?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. One subscription opens the whole shelf. Pricing per-track would turn the app into a vending machine instead of a companion."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will new tracks cost extra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Any track added after launch is included at no extra charge for active members. The shelf grows; your subscription keeps the same price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Burden and Grace a church or parachurch organization?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Neither. Burden and Grace is built by one Christian man trying to make something he needed at 6 a.m. It's not a substitute for a local church — it's a five-minute companion for the quiet before the day starts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What Bible translation does the reader use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The World English Bible (WEB) and the King James Version are in the reader today, with more translations being added over time. Rendered cleanly — no feed, no ads, no interruptions. You can highlight a verse, bookmark a chapter, and come back to it tomorrow with the same quiet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I can't afford a subscription?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start with the free track. Stay there. There is no shame in it — the free ten days are designed to be enough to put something down. The door stays open either way."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://burdenandgrace.com/pricing.html#product",
+  "name": "Burden & Grace Membership",
+  "description": "Monthly or yearly subscription unlocking all ten 30-day struggle tracks and a fresh daily devotional every day of the year. Bible reader, journal, and 10-day free track stay free.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Burden & Grace"
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": "1.99",
+    "highPrice": "39.99",
+    "offerCount": 4,
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Founding Member — Monthly (limited to first 300)",
+        "price": "1.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/LimitedAvailability",
+        "url": "https://burdenandgrace.com/pricing.html",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "1.99",
+   

@@ -1,0 +1,15 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.~lock.*
+*.tmp
+
+# Node (in case we add tooling later)
+node_modules/
+.env
+.env.local
+
+# Build output (none today; placeholder)
+dist/
+.cache/

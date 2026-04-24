@@ -1,0 +1,37 @@
+# robots.txt for burdenandgrace.com
+# ----------------------------------
+# Tells search-engine crawlers (Google, Bing, etc.) and AI answer bots
+# (ChatGPT, Perplexity, Claude, Google Gemini) which pages they can read.
+# We allow everything public and point them to the sitemap.
+
+User-agent: *
+Allow: /
+
+# Point every crawler at the sitemap so they can discover all pages quickly
+Sitemap: https://burdenandgrace.com/sitemap.xml
+
+# Explicitly welcome AI / answer-engine bots so we're eligible to be cited
+# in AI overviews, Perplexity answers, ChatGPT search, etc.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
