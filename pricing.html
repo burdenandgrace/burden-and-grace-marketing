@@ -446,4 +446,309 @@
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
           "price": "1.99",
-   
+          "priceCurrency": "USD",
+          "billingDuration": "P1M",
+          "unitText": "per month"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "Founding Member — Yearly (limited to first 300)",
+        "price": "17.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/LimitedAvailability",
+        "url": "https://burdenandgrace.com/pricing.html",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "17.99",
+          "priceCurrency": "USD",
+          "billingDuration": "P1Y",
+          "unitText": "per year"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "Standard — Monthly",
+        "price": "3.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://burdenandgrace.com/pricing.html",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "3.99",
+          "priceCurrency": "USD",
+          "billingDuration": "P1M",
+          "unitText": "per month"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "Standard — Yearly",
+        "price": "39.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://burdenandgrace.com/pricing.html",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "39.99",
+          "priceCurrency": "USD",
+          "billingDuration": "P1Y",
+          "unitText": "per year"
+        }
+      }
+    ]
+  }
+}
+</script>
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="brand" href="index.html">
+    <svg class="brand-mark" viewBox="0 0 400 400" aria-hidden="true">
+      <g stroke="#C9A84C" fill="none" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M 108 218 L 172 88 L 197 155" stroke-width="14"/>
+        <path d="M 197 155 L 220 58 L 277 200" stroke-width="14"/>
+        <line x1="220" y1="20" x2="220" y2="62" stroke-width="11"/>
+        <line x1="207" y1="34" x2="233" y2="34" stroke-width="11"/>
+      </g>
+      <g transform="translate(60 130)">
+        <path d="M 218 70 A 105 105 0 1 0 218 210 L 218 150 L 140 150" stroke="#C9A84C" stroke-width="18" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </svg>
+    <span class="brand-word">BURDEN<span class="amp">&amp;</span>GRACE</span>
+  </a>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+    <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+      <line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/>
+    </svg>
+    <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+      <line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/>
+    </svg>
+  </button>
+  <div class="nav-links" id="nav-links">
+    <a href="tracks.html">Tracks</a>
+    <a href="about.html">About</a>
+    <a href="pricing.html" aria-current="page">Pricing</a>
+    <a href="#" data-waitlist="sign_in">Sign in</a>
+  </div>
+</nav>
+
+<!-- ============ PAGE HERO ============ -->
+<header class="page-hero">
+  <p class="eyebrow">Simple, honest pricing</p>
+  <h1>One subscription. <em>Everything</em> inside.</h1>
+  <p>No per-track pricing. No upsells inside tracks. No ads. The 10-day free track stays free, always. Membership is how the app keeps being made.</p>
+</header>
+
+<!-- ============ TIERS ============ -->
+<section class="block">
+  <div class="container">
+    <div class="tier-grid">
+
+      <!-- FOUNDING -->
+      <div class="tier founding">
+        <span class="tier-badge">The First 300</span>
+        <p class="tier-eyebrow">Founding</p>
+        <h2>For the first three hundred.</h2>
+        <p class="tier-sub">Limited to the first 300 members. Founding pricing locks in for as long as you stay a member. Once the door closes, it doesn't open again.</p>
+        <div class="price-stack">
+          <div><span class="price">$1.99</span><span class="unit">/ month</span></div>
+          <div><span class="price">$17.99</span><span class="unit">/ year</span></div>
+        </div>
+        <p class="price-note">Annual saves roughly 25% vs monthly.</p>
+        <ul>
+          <li>All ten 30-day tracks — unlocked</li>
+          <li>Fresh daily devotional, 365 days a year</li>
+          <li>Any new tracks added after launch</li>
+          <li>Founding member number on your profile</li>
+          <li>Price locked for life as long as you stay</li>
+        </ul>
+        <a class="cta" href="#" data-waitlist="pricing">Become a founding member</a>
+      </div>
+
+      <!-- STANDARD -->
+      <div class="tier">
+        <p class="tier-eyebrow">Standard</p>
+        <h2>After the 300.</h2>
+        <p class="tier-sub">When the founding cap is reached, standard pricing becomes the default tier going forward. Same access, same shelf, same daily pool.</p>
+        <div class="price-stack">
+          <div><span class="price">$3.99</span><span class="unit">/ month</span></div>
+          <div><span class="price">$39.99</span><span class="unit">/ year</span></div>
+        </div>
+        <p class="price-note">Annual saves roughly 17% vs monthly.</p>
+        <ul>
+          <li>All ten 30-day tracks — unlocked</li>
+          <li>Fresh daily devotional, 365 days a year</li>
+          <li>Any new tracks added after launch</li>
+          <li>Cancel any time, no hassle</li>
+        </ul>
+        <a class="cta secondary" href="#" data-waitlist="pricing">Join when the door opens</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ WEB VS APP SUBSCRIPTION ============ -->
+<section class="block">
+  <div class="container">
+    <div class="channel-card">
+      <span class="save-tag">Save the App Store cut</span>
+      <h2>Subscribe <em>here</em> on the web — same price, more of it funds the app.</h2>
+      <p>When you subscribe inside the App Store or Google Play, the store takes a 30% cut of every dollar. When you subscribe here on the web, that cut goes back into building the tracks, the daily pool, and the quiet. Same subscription either way. Your login syncs across the app and the web.</p>
+
+      <div class="channel-row">
+        <div class="channel-col featured">
+          <p class="channel-where">Recommended &middot; on the web</p>
+          <h3>Subscribe here</h3>
+          <ul>
+            <li>Same price. Same access everywhere.</li>
+            <li>Up to 30% more goes into making the app.</li>
+            <li>Secure checkout via Stripe.</li>
+            <li>Log into the iOS or Android app with the same email and your subscription unlocks automatically.</li>
+          </ul>
+        </div>
+        <div class="channel-col">
+          <p class="channel-where">Also available &middot; in the app</p>
+          <h3>Subscribe in-app</h3>
+          <ul>
+            <li>Apple or Google handles billing.</li>
+            <li>Manage through your device's subscriptions screen.</li>
+            <li>Same tracks, same access — a chunk of every dollar goes to the store.</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="channel-note">Either path gets you the same subscription. The web path just means more of what you pay reaches the thing you're paying for.</p>
+      <div class="cta-row" style="margin-top: 22px;">
+        <a class="cta" href="#" data-waitlist="pricing">Subscribe on the web</a>
+        <a class="cta secondary" href="#" data-waitlist="download_app">Get the app</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY 300 ============ -->
+<section class="block alt">
+  <div class="container">
+    <div class="why-300">
+      <div class="count">300</div>
+      <div>
+        <h3>Why three hundred?</h3>
+        <p>Gideon's three hundred. A small group who showed up early, carried something quietly, and let God do the rest. The founding tier is a thank-you for being the kind of man who goes first — before the reviews, before the polish, before the crowd.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT MEMBERSHIP UNLOCKS (shared across pricing/tracks) ============ -->
+<section class="block center">
+  <div class="container">
+    <p class="eyebrow">Either way, you get</p>
+    <h2>The whole quiet shelf.</h2>
+    <p class="lead">One subscription opens every track, every daily devotional, and every future addition. No fine print inside the app.</p>
+    <div class="cta-row" style="justify-content: center;">
+      <a class="cta" href="tracks.html">Browse the tracks</a>
+      <a class="cta secondary" href="about.html">How it works</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="block alt">
+  <div class="container narrow">
+    <p class="eyebrow">Questions men actually ask</p>
+    <h2>A few honest answers.</h2>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <h3>Is anything really free?</h3>
+        <p>Yes. The ten-day Silent Struggles track, the full Bible reader, the journal, verse highlighting, and bookmarking — free, forever, for everyone. Create a free account in under a minute and you're in.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What happens when the 300 cap is reached?</h3>
+        <p>Founding pricing goes away for new sign-ups. Men who joined as founding members keep their price as long as they remain subscribed. Standard pricing — $3.99/mo or $39.99/yr — becomes the default going forward.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can I cancel anytime?</h3>
+        <p>Yes. There's no contract, no lock-in. If you cancel, access continues through the end of the billing period you already paid for. No guilt calls, no retention dark-patterns.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Is there a per-track option?</h3>
+        <p>No. One subscription opens the whole shelf. Pricing per-track would turn the app into something it's not meant to be — a vending machine instead of a companion.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Will new tracks cost extra?</h3>
+        <p>No. Any track added after launch is included at no extra charge for active members. The shelf grows; your subscription keeps the same price.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Is this a church or a parachurch thing?</h3>
+        <p>Neither. Burden and Grace is built by one Christian man trying to make something he needed at 6 a.m. It's not a substitute for your local church — it's a five-minute companion for the quiet before the day starts.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What translation does the Bible reader use?</h3>
+        <p>The World English Bible (WEB) and the King James Version are in the reader today, with more translations being added over time. Rendered cleanly — no feed, no ads, no interruptions. You can highlight a verse, bookmark a chapter, and come back to it tomorrow with the same quiet.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What if I just can't afford it?</h3>
+        <p>Start with the free track. Stay there. There is no shame in it — the free ten days are designed to be enough to put something down. When the weight lifts, maybe you come back. Maybe you don't. Either way, the door stays open.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING ============ -->
+<section class="block dark center">
+  <div class="container narrow">
+    <p class="eyebrow">Come as you are</p>
+    <h2>Ten days. <em>Zero</em> dollars. No card.</h2>
+    <p class="lead">The free track is the real doorway. Everything else is optional.</p>
+    <div class="cta-row" style="justify-content: center;">
+      <a class="cta large" href="#" data-waitlist="free_track">Begin the 10-day free track</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <a class="foot-brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 400 400" aria-hidden="true">
+        <g stroke="#C9A84C" fill="none" stroke-linejoin="round" stroke-linecap="round">
+          <path d="M 108 218 L 172 88 L 197 155" stroke-width="14"/>
+          <path d="M 197 155 L 220 58 L 277 200" stroke-width="14"/>
+          <line x1="220" y1="20" x2="220" y2="62" stroke-width="11"/>
+          <line x1="207" y1="34" x2="233" y2="34" stroke-width="11"/>
+        </g>
+        <g transform="translate(60 130)">
+          <path d="M 218 70 A 105 105 0 1 0 218 210 L 218 150 L 140 150" stroke="#C9A84C" stroke-width="18" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+      </svg>
+      <span class="brand-word">BURDEN<span class="amp">&amp;</span>GRACE</span>
+    </a>
+    <div class="foot-links">
+      <a href="tracks.html">Tracks</a>
+      <a href="about.html">About</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="mailto:support@burdenandgrace.com">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+    <p class="foot-copy">&copy; 2026 Burden &amp; Grace.<br/>Built for men who are weary.</p>
+  </div>
+</footer>
+
+<script src="site.js" defer></script>
+
+</body>
+</html>
