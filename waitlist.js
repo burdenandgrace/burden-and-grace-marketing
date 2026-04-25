@@ -210,4 +210,12 @@
     var node = e.target;
     // Walk up to 5 levels looking for a [data-waitlist] ancestor
     for (var i = 0; node && i < 5; i++) {
-      if (node.getAttribute && node.getAttribute('
+      if (node.getAttribute && node.getAttribute('data-waitlist')) {
+        e.preventDefault();
+        openModal(node.getAttribute('data-waitlist'));
+        return;
+      }
+      node = node.parentNode;
+    }
+  }, false);
+})();
