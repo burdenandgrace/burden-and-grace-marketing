@@ -894,4 +894,155 @@
       <a class="track" href="tracks.html"><small>Track 07 &middot; 30 days</small>The Failure You Keep Replaying</a>
       <a class="track" href="tracks.html"><small>Track 08 &middot; 30 days</small>Hidden Sin, Shame, and Secrets</a>
       <a class="track" href="tracks.html"><small>Track 09 &middot; 30 days</small>Distance in Marriage</a>
-      <a class="track" href="tracks.html"><small>Track 10 &middot; 30 da
+      <a class="track" href="tracks.html"><small>Track 10 &middot; 30 days</small>Spiritually Inconsistent and Stuck</a>
+    </div>
+    <p class="shelf-fine">Plus a fresh daily devotional every day of the year. One subscription unlocks everything.</p>
+  </div>
+</section>
+
+<!-- ============ WHAT IT'S NOT ============ -->
+<section class="block">
+  <div class="container">
+    <p class="eyebrow">What this isn't</p>
+    <h2>No hustle. No habit-hack. No <em>3 a.m.</em> alarm.</h2>
+    <div class="not-list">
+      <div class="not-item"><span class="x">&mdash;</span>No streaks that shame you into opening the app.</div>
+      <div class="not-item"><span class="x">&mdash;</span>No productivity system built on "beast mode."</div>
+      <div class="not-item"><span class="x">&mdash;</span>No ads. No feed. No algorithm tuning your scroll.</div>
+      <div class="not-item"><span class="x">&mdash;</span>No seven-step program that assumes your life is a whiteboard.</div>
+    </div>
+    <p class="not-closing">Just a quiet room, a Bible, and a few minutes &mdash; before the day eats you.</p>
+  </div>
+</section>
+
+<!-- ============ FOUNDING MEMBERS ============ -->
+<section class="block alt founding">
+  <div class="container">
+    <p class="eyebrow">Founding members &mdash; the first 300</p>
+    <h2>Like <em>Gideon's</em> 300.</h2>
+    <p class="lead">The first three hundred who come alongside Burden and Grace lock in founding pricing &mdash; for as long as they stay. Once the door closes, it doesn't open again.</p>
+    <div class="price-row">
+      <div class="price">$1.99<small>/ month</small></div>
+      <div class="price">$17.99<small>/ year</small></div>
+    </div>
+    <p class="founding-meta">Standard pricing after the 300 cap: <strong>$3.99/mo</strong> or <strong>$39.99/yr</strong>. Either tier unlocks all ten tracks plus a fresh daily devotional every day of the year. The free ten-day track stays free, always.</p>
+    <div class="cta-row">
+      <a class="cta" href="pricing.html">See full pricing</a>
+      <a class="cta secondary" href="#" data-waitlist="download_app">Download the app</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING ============ -->
+<section class="block dark closing center">
+  <div class="container narrow">
+    <blockquote>
+      "Come to me, all you who are weary and burdened, and I will give you rest."
+      <cite>&mdash; Matthew 11:28</cite>
+    </blockquote>
+    <a class="cta large" href="#" data-waitlist="free_track">Begin the 10-day free track</a>
+    <p class="fine">No credit card. Free to start.</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <a class="foot-brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 400 400" aria-hidden="true">
+        <g stroke="#C9A84C" fill="none" stroke-linejoin="round" stroke-linecap="round">
+          <path d="M 108 218 L 172 88 L 197 155" stroke-width="14"/>
+          <path d="M 197 155 L 220 58 L 277 200" stroke-width="14"/>
+          <line x1="220" y1="20" x2="220" y2="62" stroke-width="11"/>
+          <line x1="207" y1="34" x2="233" y2="34" stroke-width="11"/>
+        </g>
+        <g transform="translate(60 130)">
+          <path d="M 218 70 A 105 105 0 1 0 218 210 L 218 150 L 140 150" stroke="#C9A84C" stroke-width="18" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+      </svg>
+      <span class="brand-word">BURDEN<span class="amp">&amp;</span>GRACE</span>
+    </a>
+    <div class="foot-links">
+      <a href="tracks.html">Tracks</a>
+      <a href="about.html">About</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="mailto:support@burdenandgrace.com">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+    <p class="foot-copy">&copy; 2026 Burden &amp; Grace.<br/>Built for men who are weary.</p>
+  </div>
+</footer>
+
+<button class="replay" id="replay">Replay animation</button>
+
+<script src="site.js" defer></script>
+
+<script>
+  const INTRO_KEY = 'bg_intro_seen_v1';
+
+  const WEIGHTS = [
+    "loneliness", "grief", "shame", "the fear",
+    "exhaustion", "the doubt", "the job", "the marriage",
+    "the silence", "the weight", "anger", "worry",
+    "the diagnosis", "what no one knows", "the memory"
+  ];
+  const drift = document.getElementById('drift');
+
+  function spawnWords(skipIntro) {
+    drift.innerHTML = '';
+    const baseDelay = skipIntro ? 0.2 : 1.5;
+    WEIGHTS.forEach((word, i) => {
+      const el = document.createElement('span');
+      el.textContent = word;
+      const side = Math.random() < 0.5 ? -1 : 1;
+      const xPct = 50 + side * (14 + Math.random() * 30);
+      const yPct = 55 + Math.random() * 30;
+      const size = 16 + Math.random() * 14;
+      const delay = baseDelay + (i * 0.3) + Math.random() * 0.4;
+      const duration = 4 + Math.random() * 1.2;
+      el.style.left = xPct + '%';
+      el.style.top = yPct + '%';
+      el.style.fontSize = size + 'px';
+      el.style.animationDelay = delay + 's';
+      el.style.animationDuration = duration + 's';
+      drift.appendChild(el);
+    });
+  }
+
+  let introPlaying = true;
+  try {
+    if (sessionStorage.getItem(INTRO_KEY)) {
+      document.body.classList.add('skip-intro');
+      introPlaying = false;
+    } else {
+      sessionStorage.setItem(INTRO_KEY, '1');
+    }
+  } catch (e) {
+    // sessionStorage blocked — just play the intro
+  }
+  spawnWords(!introPlaying);
+
+  document.getElementById('skip').addEventListener('click', () => {
+    document.body.classList.add('skip-intro');
+    introPlaying = false;
+  });
+
+  document.getElementById('replay').addEventListener('click', () => {
+    document.body.classList.remove('skip-intro');
+    spawnWords(false);
+    ['figure','burden','grace'].forEach(id => {
+      const el = document.getElementById(id);
+      const c = el.cloneNode(true);
+      el.parentNode.replaceChild(c, el);
+    });
+    document.querySelectorAll('.wordmark, .divider, .prompt, .tagline, .home-hero .cta-row, .home-hero .fine, .scroll-hint').forEach(el => {
+      el.style.animation = 'none';
+      void el.offsetWidth;
+      el.style.animation = '';
+    });
+  });
+</script>
+
+</body>
+</html>
