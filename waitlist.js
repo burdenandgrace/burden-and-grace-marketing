@@ -18,11 +18,14 @@
   // CTAs that redirect into the product instead of opening the waitlist modal.
   // Tomorrow's launch: signup + use-the-app are real product flows; only
   // "download_app" stays as email capture (iOS/Android still in review).
+  // App lives on app.burdenandgrace.com; marketing on bare burdenandgrace.com.
+  // Redirects are full cross-subdomain URLs so the browser actually leaves marketing.
+  var APP_BASE = 'https://app.burdenandgrace.com';
   var REDIRECTS = {
-    sign_in:       '/Login',
-    free_track:    '/SignUp',
-    pricing:       '/SignUp',
-    premium_track: '/SignUp'
+    sign_in:       APP_BASE + '/Login',
+    free_track:    APP_BASE + '/SignUp',
+    pricing:       APP_BASE + '/SignUp',
+    premium_track: APP_BASE + '/SignUp'
     // download_app, about → still open modal below
   };
 
@@ -228,7 +231,7 @@
           openModal(source);
         } else {
           // Unknown source — fail open to signup so the user isn't dead-ended
-          window.location.href = '/SignUp';
+          window.location.href = APP_BASE + '/SignUp';
         }
         return;
       }
