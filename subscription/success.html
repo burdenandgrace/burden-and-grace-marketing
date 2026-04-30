@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Welcome — Burden & Grace</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+  :root {
+    --cream: #F4EBD8;
+    --cream-deep: #EADFC5;
+    --coffee: #3E2B1F;
+    --coffee-soft: #5C4033;
+    --bronze: #8B6F47;
+    --gold: #C9A84C;
+    --gold-dark: #A88A3A;
+    --ink: #2A1D13;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--cream);
+    color: var(--coffee);
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    min-height: 100%;
+  }
+  .wrap {
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+  }
+  .card {
+    background: #FFFDF9;
+    border: 1px solid var(--cream-deep);
+    border-radius: 16px;
+    padding: 3rem 2.25rem 2.5rem;
+    max-width: 520px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(42, 29, 19, 0.08);
+  }
+  .mark {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-size: 2rem;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+    margin-bottom: 0.25rem;
+  }
+  .label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: var(--bronze);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+    color: var(--coffee);
+  }
+  h1 em {
+    color: var(--gold);
+    font-style: italic;
+  }
+  .sub {
+    font-size: 1rem;
+    line-height: 1.55;
+    color: var(--coffee-soft);
+    margin: 0 0 1.75rem;
+  }
+  .status {
+    background: var(--cream-deep);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    color: var(--coffee-soft);
+    margin: 0 0 1.75rem;
+  }
+  .spinner {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(62, 43, 31, 0.2);
+    border-top-color: var(--gold);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .cta {
+    display: inline-block;
+    background: var(--coffee);
+    color: var(--cream);
+    padding: 0.9rem 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background 0.15s;
+  }
+  .cta:hover { background: var(--ink); }
+  .coming-soon {
+    margin-top: 2rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--cream-deep);
+    font-size: 0.85rem;
+    color: var(--coffee-soft);
+    line-height: 1.5;
+  }
+  .coming-soon strong {
+    color: var(--coffee);
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+  }
+  .ok-state .status { display: none; }
+  .ok-state .cta { background: var(--gold); color: var(--ink); }
+  .ok-state .cta:hover { background: var(--gold-dark); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card" id="card">
+    <div class="mark">A&nbsp;G</div>
+    <div class="label">BURDEN &amp; GRACE</div>
+
+    <h1>You're <em>in</em>.</h1>
+    <p class="sub">Your founding-member subscription is being activated. The full shelf — ten 30-day tracks and a fresh devotional every day — is unlocking now.</p>
+
+    <div class="status" id="status">
+      <span class="spinner"></span>Confirming with our records…
+    </div>
+
+    <a href="/" class="cta" id="continueBtn">Open the app</a>
+
+    <div class="coming-soon">
+      <strong>iOS &amp; Android — coming soon</strong>
+      The web app works on any browser, including mobile. The native iOS and Google Play apps are in store review now — your subscription will work the moment they're approved. We'll email you the day each goes live.
+    </div>
+  </div>
+</div>
+
+<script>
+  // Poll Supabase for is_premium=true so the user knows the webhook landed
+  // before we drop them into the app. Falls through after ~12 seconds either way.
+  (function () {
+    var SUPABASE_URL = 'https://hycalmremlhqymgbmvlg.supabase.co';
+    var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh5Y2FsbXJlbWxocXltZ2JtdmxnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU3NTg0ODgsImV4cCI6MjA5MTMzNDQ4OH0.awA2KnZVNaLW1tb7Pjgo5MoMUB3C81J9Ykeha9g8Ixw';
+    var card = document.getElementById('card');
+    var status = document.getElementById('status');
+    var attempts = 0;
+    var maxAttempts = 12; // ~24 seconds of polling
+
+    function getAccessToken() {
+      // Supabase JS stores session under sb-<project_ref>-auth-token
+      try {
+        for (var i = 0; i < localStorage.length; i++) {
+          var k = localStorage.key(i);
+          if (k && k.indexOf('-auth-token') > 0) {
+            var v = JSON.parse(localStorage.getItem(k) || '{}');
+            return v.access_token || (v.currentSession && v.currentSession.access_token) || null;
+          }
+        }
+      } catch (e) {}
+      return null;
+    }
+
+    function poll() {
+      attempts++;
+      var token = getAccessToken();
+      if (!token) {
+        // Not signed in here — likely the user is on a different domain/origin
+        // for the marketing site vs the app. Just let them click through.
+        status.innerHTML = 'Subscription confirmed. Continue when ready.';
+        return;
+      }
+
+      fetch(SUPABASE_URL + '/rest/v1/profiles?select=is_premium', {
+        headers: {
+          apikey: SUPABASE_ANON_KEY,
+          Authorization: 'Bearer ' + token,
+        },
+      })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (rows) {
+        if (rows && rows[0] && rows[0].is_premium) {
+          card.classList.add('ok-state');
+          status.innerHTML = '✓ All set.';
+          // Auto-redirect after 1.5s
+          setTimeout(function () { window.location.href = '/'; }, 1500);
+          return;
+        }
+        if (attempts >= maxAttempts) {
+          status.innerHTML = 'Almost there — you can open the app now and refresh in a moment if needed.';
+          return;
+        }
+        setTimeout(poll, 2000);
+      })
+      .catch(function () {
+        if (attempts >= maxAttempts) {
+          status.innerHTML = 'You can open the app and refresh if your subscription doesn\'t show up immediately.';
+          return;
+        }
+        setTimeout(poll, 2000);
+      });
+    }
+
+    // Start polling after a short delay so Stripe's webhook has a head start
+    setTimeout(poll, 1500);
+  })();
+</script>
+</body>
+</html>

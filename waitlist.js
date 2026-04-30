@@ -15,14 +15,21 @@
   var SUPABASE_URL = 'https://hycalmremlhqymgbmvlg.supabase.co';
   var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh5Y2FsbXJlbWxocXltZ2JtdmxnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU3NTg0ODgsImV4cCI6MjA5MTMzNDQ4OH0.awA2KnZVNaLW1tb7Pjgo5MoMUB3C81J9Ykeha9g8Ixw';
 
-  // Human-friendly copy per CTA source. Keep headlines short.
+  // CTAs that redirect into the product instead of opening the waitlist modal.
+  // Tomorrow's launch: signup + use-the-app are real product flows; only
+  // "download_app" stays as email capture (iOS/Android still in review).
+  var REDIRECTS = {
+    sign_in:       '/Login',
+    free_track:    '/SignUp',
+    pricing:       '/SignUp',
+    premium_track: '/SignUp'
+    // download_app, about → still open modal below
+  };
+
+  // Human-friendly copy per CTA source for the modal flow.
   var COPY = {
-    sign_in:      { title: 'Hold your spot.',     sub: 'Sign-in opens when the app launches. Drop your email and we\'ll tell you the day it\'s live.' },
-    free_track:   { title: 'First dibs on the free track.', sub: 'The 10-day Silent Struggles track goes live with the app. We\'ll email you the moment it does — nothing before, nothing after.' },
-    download_app: { title: 'Get the download link on launch day.', sub: 'The iOS app ships soon. Drop your email and we\'ll send the App Store link the day it\'s live.' },
-    pricing:      { title: 'Founding member spot — save 50%.', sub: 'The first 300 lock in founding pricing ($1.99/mo or $17.99/yr). We\'ll email you when that door opens.' },
-    about:        { title: 'Launch day note.',    sub: 'One email on the day Burden & Grace goes live. Nothing else.' },
-    premium_track:{ title: 'First look at the full shelf.', sub: 'This track opens with membership on launch day. Drop your email and we\'ll tell you the moment the door opens.' }
+    download_app: { title: 'iOS & Android — coming soon.', sub: 'The web app is live today; the mobile apps are in App Store + Google Play review. Drop your email and we\'ll send the store links the day they\'re approved.' },
+    about:        { title: 'Launch day note.',    sub: 'One email on the day Burden & Grace expands. Nothing else.' }
   };
 
   // ---- CSS (injected once) ---------------------------------------------
@@ -206,13 +213,23 @@
   }
 
   // ---- CTA binding (event delegation) ----------------------------------
+  // For sources in REDIRECTS map: navigate to the in-product route.
+  // For sources still in COPY: open the email-capture modal.
   document.addEventListener('click', function (e) {
     var node = e.target;
     // Walk up to 5 levels looking for a [data-waitlist] ancestor
     for (var i = 0; node && i < 5; i++) {
       if (node.getAttribute && node.getAttribute('data-waitlist')) {
+        var source = node.getAttribute('data-waitlist');
         e.preventDefault();
-        openModal(node.getAttribute('data-waitlist'));
+        if (REDIRECTS[source]) {
+          window.location.href = REDIRECTS[source];
+        } else if (COPY[source]) {
+          openModal(source);
+        } else {
+          // Unknown source — fail open to signup so the user isn't dead-ended
+          window.location.href = '/SignUp';
+        }
         return;
       }
       node = node.parentNode;
