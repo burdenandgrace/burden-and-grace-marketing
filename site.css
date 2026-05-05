@@ -390,16 +390,27 @@ footer.site-footer .container {
 .center-text { text-align: center !important; }
 
 /* Make the diptych intro section center everything by default */
-.diptych .eyebrow,
-.diptych h2,
-.diptych-intro {
+section.diptych .eyebrow,
+section.diptych h2,
+section.diptych .diptych-intro,
+section.diptych p.lead,
+section.diptych p {
   text-align: center !important;
-  margin-left: auto;
-  margin-right: auto;
 }
-.diptych-intro {
+section.diptych .diptych-intro {
   max-width: 640px;
+  margin-left: auto !important;
+  margin-right: auto !important;
   margin-bottom: 48px;
+  display: block;
+}
+/* Card-internal text stays left-aligned (override the centering inside cards) */
+section.diptych .diptych-card,
+section.diptych .diptych-card * {
+  text-align: left !important;
+}
+section.diptych .diptych-card .diptych-tag {
+  align-self: flex-start;
 }
 
 .diptych-grid {
@@ -467,7 +478,23 @@ footer.site-footer .container {
   margin-bottom: 24px !important;
 }
 
-.diptych-card .cta { margin-top: auto; }
+.diptych-card .cta {
+  margin-top: auto;
+  align-self: center !important;
+  background: var(--coffee) !important;
+  color: var(--cream) !important;
+  border: 1px solid var(--coffee) !important;
+}
+.diptych-card .cta.secondary {
+  background: var(--coffee) !important;
+  color: var(--cream) !important;
+  border: 1px solid var(--coffee) !important;
+}
+.diptych-card .cta:hover,
+.diptych-card .cta.secondary:hover {
+  background: var(--ink) !important;
+  border-color: var(--ink) !important;
+}
 
 .diptych-fine {
   font-size: 13px;
@@ -512,5 +539,65 @@ footer.site-footer .container {
   }
   .couples-line {
     font-size: 15px;
+  }
+}
+
+
+/* ============================================================
+   Homepage founding tiers (3-card grid: Him / Her / Couples)
+   ============================================================ */
+.founding-tiers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+  max-width: 720px;
+  margin: 28px auto 24px auto;
+}
+.founding-tier-card {
+  background: var(--cream);
+  border: 1px solid rgba(201,168,76,0.4);
+  border-radius: 12px;
+  padding: 18px 16px;
+  text-align: center;
+}
+.founding-tier-card.couples-card {
+  background: linear-gradient(155deg, var(--cream) 0%, #FAF4E5 100%);
+  border-color: rgba(201,168,76,0.7);
+}
+.founding-tier-card .ft-eyebrow {
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--bronze);
+  margin: 0 0 12px;
+  font-weight: 500;
+}
+.founding-tier-card .price-row {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.founding-tier-card .price {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 26px;
+  color: var(--gold);
+  font-weight: 500;
+  line-height: 1;
+}
+.founding-tier-card .price small {
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--coffee-soft);
+  margin-left: 4px;
+  font-weight: 400;
+}
+@media (max-width: 720px) {
+  .founding-tiers {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 }
