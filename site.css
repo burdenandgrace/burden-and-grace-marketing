@@ -383,3 +383,123 @@ footer.site-footer .container {
   .brand-mark { width: 34px; height: 34px; }
   section.block h1, section.block h2 { font-size: clamp(26px, 7vw, 34px); }
 }
+
+/* ============================================================
+   For Him / For Her diptych section (homepage)
+   ============================================================ */
+.center-text { text-align: center; }
+
+.diptych .lead { max-width: 640px; margin-left: auto; margin-right: auto; margin-bottom: 48px; }
+
+.diptych-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.diptych-card {
+  background: var(--cream);
+  border: 1px solid var(--cream-deep);
+  border-radius: 14px;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 1px 2px rgba(62, 43, 31, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.diptych-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(62, 43, 31, 0.08);
+}
+
+.diptych-tag {
+  display: inline-block;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+.diptych-tag.soft {
+  color: var(--bronze);
+  border-color: var(--bronze);
+}
+
+.diptych-card h3 {
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--coffee);
+  margin: 0 0 16px 0;
+  line-height: 1.25;
+}
+
+.diptych-card p {
+  color: var(--coffee-soft);
+  line-height: 1.6;
+  margin: 0 0 14px 0;
+}
+
+.diptych-card em { color: var(--coffee); font-style: italic; }
+
+.diptych-meta {
+  font-size: 13px;
+  color: var(--bronze);
+  letter-spacing: 0.02em;
+  margin-bottom: 24px !important;
+}
+
+.diptych-card .cta { margin-top: auto; }
+
+.diptych-fine {
+  font-size: 13px;
+  color: var(--bronze);
+  margin-top: 12px !important;
+  margin-bottom: 0 !important;
+}
+
+/* Couples row beneath the diptych */
+.couples-row {
+  margin-top: 36px;
+  padding: 24px 28px;
+  background: var(--cream-deep);
+  border-radius: 12px;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.couples-line {
+  margin: 0;
+  text-align: center;
+  color: var(--coffee-soft);
+  line-height: 1.6;
+  font-size: 16px;
+}
+.couples-line strong { color: var(--coffee); }
+
+/* Mobile — stack the diptych */
+@media (max-width: 720px) {
+  .diptych-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .diptych-card {
+    padding: 28px 22px;
+  }
+  .diptych-card h3 {
+    font-size: 24px;
+  }
+  .couples-row {
+    padding: 20px 22px;
+  }
+  .couples-line {
+    font-size: 15px;
+  }
+}
