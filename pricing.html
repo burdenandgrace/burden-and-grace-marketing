@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pricing — Founding Member Access for the First 300 | Burden &amp; Grace</title>
-<meta name="description" content="Founding pricing for Burden &amp; Grace: $1.99/mo or $17.99/yr, locked for life, limited to the first 300 members. Standard $3.99/mo or $39.99/yr after. Free 10-day track, always free.">
-<meta name="keywords" content="Burden and Grace pricing, Christian devotional app subscription, founding member pricing, men's devotional app cost">
+<title>Pricing — For Him, For Her, and Couples | Burden &amp; Grace</title>
+<meta name="description" content="Founding pricing for Burden &amp; Grace: $1.99/mo for For Him or For Her, $2.99/mo for Couples (two private accounts on one subscription). Locked for life. Limited to the first 300. Free 10-day track always free.">
+<meta name="keywords" content="Burden and Grace pricing, Christian devotional app subscription, founding member pricing, men's devotional, women's devotional, couples devotional, couples subscription">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <link rel="canonical" href="https://burdenandgrace.com/pricing.html">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Burden &amp; Grace">
-<meta property="og:title" content="Pricing — Founding Member Access for the First 300 | Burden &amp; Grace">
-<meta property="og:description" content="Founding pricing ($1.99/mo or $17.99/yr) for the first 300 members, locked for life. One subscription unlocks everything.">
+<meta property="og:title" content="Pricing — For Him, For Her, and Couples | Burden &amp; Grace">
+<meta property="og:description" content="Three plans. Founding pricing locked for the first 300 in each. For Him and For Her: $1.99/mo. Couples: $2.99/mo (two private accounts on one subscription).">
 <meta property="og:url" content="https://burdenandgrace.com/pricing.html">
 <meta property="og:image" content="https://burdenandgrace.com/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -22,8 +22,8 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Pricing — Founding Member Access for the First 300">
-<meta name="twitter:description" content="$1.99/mo or $17.99/yr, locked for life — limited to the first 300. One subscription unlocks everything.">
+<meta name="twitter:title" content="Pricing — For Him, For Her, and Couples | Burden &amp; Grace">
+<meta name="twitter:description" content="$1.99/mo or $17.99/yr, locked for life. Limited to the first 300. One subscription unlocks everything.">
 <meta name="twitter:image" content="https://burdenandgrace.com/og-image.png">
 
 <meta name="theme-color" content="#F4EAD5">
@@ -42,12 +42,20 @@
     gap: 26px;
     margin-top: 10px;
   }
+  .tier-grid.tier-grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 22px;
+  }
+  .tiers-eyebrow {
+    margin-bottom: 32px;
+    margin-top: 0;
+  }
   .tier {
     position: relative;
     background: var(--cream);
     border: 1px solid rgba(62,43,31,0.1);
     border-radius: 18px;
-    padding: 42px 38px;
+    padding: 42px 32px;
     display: flex;
     flex-direction: column;
   }
@@ -55,6 +63,37 @@
     border-color: rgba(201,168,76,0.55);
     background: linear-gradient(160deg, var(--cream) 0%, #FAF4E5 100%);
     box-shadow: 0 10px 30px rgba(201,168,76,0.12);
+  }
+  .tier.founding.her {
+    border-color: rgba(139,111,71,0.45);
+    background: linear-gradient(160deg, var(--cream) 0%, #F4EBD8 100%);
+    box-shadow: 0 10px 30px rgba(139,111,71,0.10);
+  }
+  .tier.founding.couples {
+    border-color: rgba(201,168,76,0.7);
+    background: linear-gradient(160deg, #FAF4E5 0%, #F0E2BE 100%);
+    box-shadow: 0 12px 32px rgba(201,168,76,0.18);
+  }
+  .tier-badge.soft {
+    background: var(--bronze);
+    color: var(--cream);
+  }
+  .tier-badge.gold {
+    background: linear-gradient(95deg, var(--gold), #D9B85C);
+    color: var(--ink);
+  }
+  .tier h2 {
+    font-size: 24px !important;
+  }
+  /* responsive: 3-column collapses to 1 column on mobile */
+  @media (max-width: 980px) {
+    .tier-grid.tier-grid-3 {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    .tier h2 {
+      font-size: 28px !important;
+    }
   }
   .tier-badge {
     position: absolute;
@@ -363,7 +402,7 @@
       "name": "What happens when the 300 founding-member cap is reached?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Founding pricing goes away for new sign-ups. Men who joined as founding members keep their price as long as they remain subscribed. Standard pricing — $3.99/mo or $39.99/yr — becomes the default going forward."
+        "text": "Founding pricing goes away for new sign-ups. Founding members keep their price as long as they remain subscribed. Standard pricing of $3.99/mo or $39.99/yr becomes the default going forward."
       }
     },
     {
@@ -395,7 +434,7 @@
       "name": "Is Burden and Grace a church or parachurch organization?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Neither. Burden and Grace is built by one Christian man trying to make something he needed at 6 a.m. It's not a substitute for a local church — it's a five-minute companion for the quiet before the day starts."
+        "text": "Neither. Burden and Grace is built by one Christian man trying to make something he needed at 6 a.m. It's not a substitute for a local church. It's a five-minute companion for the quiet before the day starts."
       }
     },
     {
@@ -403,7 +442,7 @@
       "name": "What Bible translation does the reader use?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The World English Bible (WEB) and the King James Version are in the reader today, with more translations being added over time. Rendered cleanly — no feed, no ads, no interruptions. You can highlight a verse, bookmark a chapter, and come back to it tomorrow with the same quiet."
+        "text": "The World English Bible (WEB) and the King James Version are in the reader today, with more translations being added over time. Rendered cleanly. No feed, no ads, no interruptions. You can highlight a verse, bookmark a chapter, and come back to it tomorrow with the same quiet."
       }
     },
     {
@@ -411,7 +450,7 @@
       "name": "What if I can't afford a subscription?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Start with the free track. Stay there. There is no shame in it — the free ten days are designed to be enough to put something down. The door stays open either way."
+        "text": "Start with the free track. Stay there. There is no shame in it. The free ten days are designed to be enough to put something down. The door stays open either way."
       }
     }
   ]
@@ -539,52 +578,80 @@
 <header class="page-hero">
   <p class="eyebrow">Simple, honest pricing</p>
   <h1>One subscription. <em>Everything</em> inside.</h1>
-  <p>No per-track pricing. No upsells inside tracks. No ads. The 10-day free track stays free, always. Membership is how the app keeps being made.</p>
+  <p>Three plans. For Him, For Her, or Couples. No per-track pricing. No upsells inside tracks. No ads. The 10-day free track stays free, always. Membership is how the app keeps being made.</p>
 </header>
 
 <!-- ============ TIERS ============ -->
 <section class="block">
   <div class="container">
-    <div class="tier-grid">
 
-      <!-- FOUNDING -->
+    <div class="tiers-eyebrow">
+      <p class="eyebrow center-text">Three plans. Same shelf. Founding pricing while it lasts.</p>
+    </div>
+
+    <div class="tier-grid tier-grid-3">
+
+      <!-- FOR HIM -->
       <div class="tier founding">
-        <span class="tier-badge">The First 300</span>
-        <p class="tier-eyebrow">Founding</p>
-        <h2>For the first three hundred.</h2>
-        <p class="tier-sub">Limited to the first 300 members. Founding pricing locks in for as long as you stay a member. Once the door closes, it doesn't open again.</p>
+        <span class="tier-badge">First 300</span>
+        <p class="tier-eyebrow">For Him</p>
+        <h2>For the man tired of carrying it alone.</h2>
+        <p class="tier-sub">Ten 30-day tracks on the weights men carry in silence. A daily devotional that doesn't shame him for being tired.</p>
         <div class="price-stack">
           <div><span class="price">$1.99</span><span class="unit">/ month</span></div>
           <div><span class="price">$17.99</span><span class="unit">/ year</span></div>
         </div>
-        <p class="price-note">Annual saves roughly 25% vs monthly.</p>
+        <p class="price-note">Founding pricing. After the first 300 men, standard is $3.99/mo or $39.99/yr.</p>
         <ul>
-          <li>All ten 30-day tracks — unlocked</li>
+          <li>All ten men's 30-day tracks unlocked</li>
           <li>Fresh daily devotional, 365 days a year</li>
           <li>Any new tracks added after launch</li>
-          <li>Founding member number on your profile</li>
+          <li>Founding member number on profile</li>
           <li>Price locked for life as long as you stay</li>
         </ul>
-        <a class="cta" href="#" data-waitlist="pricing">Become a founding member</a>
+        <a class="cta" href="#" data-waitlist="pricing_him">Become a founding member</a>
       </div>
 
-      <!-- STANDARD -->
-      <div class="tier">
-        <p class="tier-eyebrow">Standard</p>
-        <h2>After the 300.</h2>
-        <p class="tier-sub">When the founding cap is reached, standard pricing becomes the default tier going forward. Same access, same shelf, same daily pool.</p>
+      <!-- FOR HER -->
+      <div class="tier founding her">
+        <span class="tier-badge soft">First 300</span>
+        <p class="tier-eyebrow">For Her</p>
+        <h2>For the woman carrying everyone but herself.</h2>
+        <p class="tier-sub">Ten 30-day tracks written by a woman, for the weights women carry. Plus a daily devotional that meets her in the kitchen at 5 AM.</p>
         <div class="price-stack">
-          <div><span class="price">$3.99</span><span class="unit">/ month</span></div>
-          <div><span class="price">$39.99</span><span class="unit">/ year</span></div>
+          <div><span class="price">$1.99</span><span class="unit">/ month</span></div>
+          <div><span class="price">$17.99</span><span class="unit">/ year</span></div>
         </div>
-        <p class="price-note">Annual saves roughly 17% vs monthly.</p>
+        <p class="price-note">Founding pricing. After the first 300 women, standard is $3.99/mo or $39.99/yr.</p>
         <ul>
-          <li>All ten 30-day tracks — unlocked</li>
+          <li>All ten women's 30-day tracks unlocked</li>
           <li>Fresh daily devotional, 365 days a year</li>
           <li>Any new tracks added after launch</li>
-          <li>Cancel any time, no hassle</li>
+          <li>Founding member number on profile</li>
+          <li>Price locked for life as long as you stay</li>
         </ul>
-        <a class="cta secondary" href="#" data-waitlist="pricing">Join when the door opens</a>
+        <a class="cta secondary" href="#" data-waitlist="pricing_her">Join the For Her waitlist</a>
+      </div>
+
+      <!-- COUPLES -->
+      <div class="tier founding couples">
+        <span class="tier-badge gold">For You Both</span>
+        <p class="tier-eyebrow">Couples</p>
+        <h2>For us. Together.</h2>
+        <p class="tier-sub">One subscription covers both libraries on two private accounts. Each spouse keeps their own journal, their own progress, their own encrypted privacy.</p>
+        <div class="price-stack">
+          <div><span class="price">$2.99</span><span class="unit">/ month</span></div>
+          <div><span class="price">$25.99</span><span class="unit">/ year</span></div>
+        </div>
+        <p class="price-note">Founding pricing. After the first 300 couples, standard is $5.99/mo or $54.99/yr. Saves about a coffee a month.</p>
+        <ul>
+          <li>Both libraries unlocked. His and hers.</li>
+          <li>Two separate accounts on one subscription</li>
+          <li>Each journal stays private. End-to-end encrypted.</li>
+          <li>Founding member number for the household</li>
+          <li>Price locked for life as long as you stay</li>
+        </ul>
+        <a class="cta" href="#" data-waitlist="pricing_couples">Become a founding couple</a>
       </div>
 
     </div>
@@ -596,7 +663,7 @@
   <div class="container">
     <div class="channel-card">
       <span class="save-tag">Save the App Store cut</span>
-      <h2>Subscribe <em>here</em> on the web — same price, more of it funds the app.</h2>
+      <h2>Subscribe <em>here</em> on the web. Same price, more of it funds the app.</h2>
       <p>When you subscribe inside the App Store or Google Play, the store takes a 30% cut of every dollar. When you subscribe here on the web, that cut goes back into building the tracks, the daily pool, and the quiet. Same subscription either way. Your login syncs across the app and the web.</p>
 
       <div class="channel-row">
@@ -616,7 +683,7 @@
           <ul>
             <li>Apple or Google handles billing.</li>
             <li>Manage through your device's subscriptions screen.</li>
-            <li>Same tracks, same access — a chunk of every dollar goes to the store.</li>
+            <li>Same tracks, same access. A chunk of every dollar goes to the store.</li>
           </ul>
         </div>
       </div>
@@ -637,7 +704,7 @@
       <div class="count">300</div>
       <div>
         <h3>Why three hundred?</h3>
-        <p>Gideon's three hundred. A small group who showed up early, carried something quietly, and let God do the rest. The founding tier is a thank-you for being the kind of man who goes first — before the reviews, before the polish, before the crowd.</p>
+        <p>Gideon's three hundred. A small group who showed up early, carried something quietly, and let God do the rest. The founding tier is a thank-you for being the kind of person who goes first. Before the reviews, before the polish, before the crowd. Each tier (For Him, For Her, Couples) has its own three hundred. Three doors, three small groups, all walking the same gospel.</p>
       </div>
     </div>
   </div>
@@ -659,96 +726,25 @@
 <!-- ============ FAQ ============ -->
 <section class="block alt">
   <div class="container narrow">
-    <p class="eyebrow">Questions men actually ask</p>
+    <p class="eyebrow">Questions people actually ask</p>
     <h2>A few honest answers.</h2>
     <div class="faq-list">
 
       <div class="faq-item">
         <h3>Is anything really free?</h3>
-        <p>Yes. The ten-day Silent Struggles track, the full Bible reader, the journal, verse highlighting, and bookmarking — free, forever, for everyone. Create a free account in under a minute and you're in.</p>
+        <p>Yes. The ten-day Silent Struggles track, the full Bible reader, the journal, verse highlighting, and bookmarking. Free, forever, for everyone. Create a free account in under a minute and you're in.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What's the difference between For Him, For Her, and Couples?</h3>
+        <p>For Him gives you the men's library: ten 30-day tracks and daily devotionals written for the weights men carry. For Her gives you the women's library: ten 30-day tracks and daily devotionals written for the weights women carry, by a woman. Couples gives both libraries on two separate accounts (one subscription) so each spouse keeps their own private journal and progress.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How does the Couples tier keep journals private?</h3>
+        <p>Two separate accounts on one subscription. Each person has their own login, their own encryption key, their own journal entries. Even on the same family iPad, signing into your account loads only your data. Your spouse cannot read your journal. We cannot read your journal. The encryption is end-to-end.</p>
       </div>
 
       <div class="faq-item">
         <h3>What happens when the 300 cap is reached?</h3>
-        <p>Founding pricing goes away for new sign-ups. Men who joined as founding members keep their price as long as they remain subscribed. Standard pricing — $3.99/mo or $39.99/yr — becomes the default going forward.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Can I cancel anytime?</h3>
-        <p>Yes. There's no contract, no lock-in. If you cancel, access continues through the end of the billing period you already paid for. No guilt calls, no retention dark-patterns.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Is there a per-track option?</h3>
-        <p>No. One subscription opens the whole shelf. Pricing per-track would turn the app into something it's not meant to be — a vending machine instead of a companion.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Will new tracks cost extra?</h3>
-        <p>No. Any track added after launch is included at no extra charge for active members. The shelf grows; your subscription keeps the same price.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Is this a church or a parachurch thing?</h3>
-        <p>Neither. Burden and Grace is built by one Christian man trying to make something he needed at 6 a.m. It's not a substitute for your local church — it's a five-minute companion for the quiet before the day starts.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>What translation does the Bible reader use?</h3>
-        <p>The World English Bible (WEB) and the King James Version are in the reader today, with more translations being added over time. Rendered cleanly — no feed, no ads, no interruptions. You can highlight a verse, bookmark a chapter, and come back to it tomorrow with the same quiet.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>What if I just can't afford it?</h3>
-        <p>Start with the free track. Stay there. There is no shame in it — the free ten days are designed to be enough to put something down. When the weight lifts, maybe you come back. Maybe you don't. Either way, the door stays open.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ============ CLOSING ============ -->
-<section class="block dark center">
-  <div class="container narrow">
-    <p class="eyebrow">Come as you are</p>
-    <h2>Ten days. <em>Zero</em> dollars. No card.</h2>
-    <p class="lead">The free track is the real doorway. Everything else is optional.</p>
-    <div class="cta-row" style="justify-content: center;">
-      <a class="cta large" href="#" data-waitlist="free_track">Begin the 10-day free track</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FOOTER ============ -->
-<footer class="site-footer">
-  <div class="container">
-    <a class="foot-brand" href="index.html">
-      <svg class="brand-mark" viewBox="0 0 400 400" aria-hidden="true">
-        <g stroke="#C9A84C" fill="none" stroke-linejoin="round" stroke-linecap="round">
-          <path d="M 108 218 L 172 88 L 197 155" stroke-width="14"/>
-          <path d="M 197 155 L 220 58 L 277 200" stroke-width="14"/>
-          <line x1="220" y1="20" x2="220" y2="62" stroke-width="11"/>
-          <line x1="207" y1="34" x2="233" y2="34" stroke-width="11"/>
-        </g>
-        <g transform="translate(60 130)">
-          <path d="M 218 70 A 105 105 0 1 0 218 210 L 218 150 L 140 150" stroke="#C9A84C" stroke-width="18" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        </g>
-      </svg>
-      <span class="brand-word">BURDEN<span class="amp">&amp;</span>GRACE</span>
-    </a>
-    <div class="foot-links">
-      <a href="tracks.html">Tracks</a>
-      <a href="about.html">About</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="mailto:support@burdenandgrace.com">Contact</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-    </div>
-    <p class="foot-copy">&copy; 2026 Burden &amp; Grace.<br/>Built for men who are weary.</p>
-  </div>
-</footer>
-
-<script src="site.js" defer></script>
-
-</body>
-</html>
+        <p>Founding pricing goes away for new sign-ups in that tier. Members who joined as founding keep their price as long as they remain subscribed. Standard pricing becomes the default going forward: $3.99/mo or $3
