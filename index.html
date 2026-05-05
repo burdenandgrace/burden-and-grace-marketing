@@ -952,9 +952,9 @@
 <!-- ============ FOUNDING MEMBERS ============ -->
 <section class="block alt founding">
   <div class="container">
-    <p class="eyebrow">Founding members. The first 300 in each tier.</p>
+    <p class="eyebrow">Founding members. The first 300 subscribers across all tiers.</p>
     <h2>Like <em>Gideon's</em> 300.</h2>
-    <p class="lead">The first three hundred who come alongside Burden and Grace lock in founding pricing for as long as they stay. Three doors. Three small groups. Once each door closes, it doesn't open again.</p>
+    <p class="lead">The first three hundred subscribers across all of Burden and Grace lock in founding pricing for as long as they stay. Whoever joins first, in any tier, locks the price. Once the three hundred fill up, the door closes and standard pricing takes over.</p>
     <div class="founding-tiers">
       <div class="founding-tier-card">
         <p class="ft-eyebrow">For Him</p>
@@ -978,7 +978,7 @@
         </div>
       </div>
     </div>
-    <p class="founding-meta">Each subscription unlocks the full library it covers: ten 30-day tracks plus a fresh daily devotional every day of the year. Couples unlocks BOTH libraries on two private accounts. Standard pricing kicks in after each tier hits 300. The free ten-day track stays free, always.</p>
+    <p class="founding-meta">Each subscription unlocks the full library it covers: ten 30-day tracks plus a fresh daily devotional every day of the year. Couples unlocks BOTH libraries on two private accounts. Standard pricing kicks in after the shared three hundred cap fills, no matter which tiers got there first. The free ten-day track stays free, always.</p>
     <div class="cta-row">
       <a class="cta" href="pricing.html">See full pricing</a>
       <a class="cta secondary" href="#" data-waitlist="download_app">Download the app</a>
@@ -1006,96 +1006,4 @@
         <g stroke="#C9A84C" fill="none" stroke-linejoin="round" stroke-linecap="round">
           <path d="M 108 218 L 172 88 L 197 155" stroke-width="14"/>
           <path d="M 197 155 L 220 58 L 277 200" stroke-width="14"/>
-          <line x1="220" y1="20" x2="220" y2="62" stroke-width="11"/>
-          <line x1="207" y1="34" x2="233" y2="34" stroke-width="11"/>
-        </g>
-        <g transform="translate(60 130)">
-          <path d="M 218 70 A 105 105 0 1 0 218 210 L 218 150 L 140 150" stroke="#C9A84C" stroke-width="18" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        </g>
-      </svg>
-      <span class="brand-word">BURDEN<span class="amp">&amp;</span>GRACE</span>
-    </a>
-    <div class="foot-links">
-      <a href="tracks.html">Tracks</a>
-      <a href="about.html">About</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="mailto:support@burdenandgrace.com">Contact</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-    </div>
-    <p class="foot-copy">&copy; 2026 Burden &amp; Grace.<br/>Built for the men and women who are weary.</p>
-  </div>
-</footer>
-
-<button class="replay" id="replay">Replay animation</button>
-
-<script src="site.js" defer></script>
-
-<script>
-  const INTRO_KEY = 'bg_intro_seen_v1';
-
-  const WEIGHTS = [
-    "loneliness", "grief", "shame", "the fear",
-    "exhaustion", "the doubt", "the job", "the marriage",
-    "the silence", "the weight", "anger", "worry",
-    "the diagnosis", "what no one knows", "the memory"
-  ];
-  const drift = document.getElementById('drift');
-
-  function spawnWords(skipIntro) {
-    drift.innerHTML = '';
-    const baseDelay = skipIntro ? 0.2 : 1.5;
-    WEIGHTS.forEach((word, i) => {
-      const el = document.createElement('span');
-      el.textContent = word;
-      const side = Math.random() < 0.5 ? -1 : 1;
-      const xPct = 50 + side * (14 + Math.random() * 30);
-      const yPct = 55 + Math.random() * 30;
-      const size = 16 + Math.random() * 14;
-      const delay = baseDelay + (i * 0.3) + Math.random() * 0.4;
-      const duration = 4 + Math.random() * 1.2;
-      el.style.left = xPct + '%';
-      el.style.top = yPct + '%';
-      el.style.fontSize = size + 'px';
-      el.style.animationDelay = delay + 's';
-      el.style.animationDuration = duration + 's';
-      drift.appendChild(el);
-    });
-  }
-
-  let introPlaying = true;
-  try {
-    if (sessionStorage.getItem(INTRO_KEY)) {
-      document.body.classList.add('skip-intro');
-      introPlaying = false;
-    } else {
-      sessionStorage.setItem(INTRO_KEY, '1');
-    }
-  } catch (e) {
-    // sessionStorage blocked — just play the intro
-  }
-  spawnWords(!introPlaying);
-
-  document.getElementById('skip').addEventListener('click', () => {
-    document.body.classList.add('skip-intro');
-    introPlaying = false;
-  });
-
-  document.getElementById('replay').addEventListener('click', () => {
-    document.body.classList.remove('skip-intro');
-    spawnWords(false);
-    ['figure','burden','grace'].forEach(id => {
-      const el = document.getElementById(id);
-      const c = el.cloneNode(true);
-      el.parentNode.replaceChild(c, el);
-    });
-    document.querySelectorAll('.wordmark, .divider, .prompt, .tagline, .home-hero .cta-row, .home-hero .fine, .scroll-hint').forEach(el => {
-      el.style.animation = 'none';
-      void el.offsetWidth;
-      el.style.animation = '';
-    });
-  });
-</script>
-
-</body>
-</html>
+          <line x1="220" y1="20" x2="
