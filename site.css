@@ -412,6 +412,13 @@ section.diptych .diptych-card * {
 section.diptych .diptych-card .diptych-tag {
   align-self: flex-start;
 }
+/* But the no-credit-card microcopy under the centered button stays centered */
+section.diptych .diptych-card .diptych-fine {
+  text-align: center !important;
+  align-self: center;
+  margin-top: 12px !important;
+  margin-bottom: 0 !important;
+}
 
 .diptych-grid {
   display: grid;
@@ -549,7 +556,7 @@ section.diptych .diptych-card .diptych-tag {
    ============================================================ */
 .founding-stack {
   max-width: 580px;
-  margin: 32px auto 28px;
+  margin: 32px 0 28px;
   border: 1px solid rgba(201,168,76,0.4);
   border-radius: 14px;
   overflow: hidden;
@@ -626,4 +633,90 @@ section.diptych .diptych-card .diptych-tag {
     gap: 8px;
   }
   .founding-row-prices { justify-content: center; }
+}
+
+/* ============================================================
+   Tracks page — two-shelves side-by-side (5 men + 5 women)
+   ============================================================ */
+.two-shelves {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 32px;
+  align-items: start;
+}
+.shelf-col {
+  display: flex;
+  flex-direction: column;
+}
+.shelf-head {
+  margin-bottom: 18px;
+}
+.shelf-head h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--coffee);
+  margin: 0 0 4px;
+  line-height: 1.2;
+}
+.shelf-tracks {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+/* track-card already styled — override for narrower width when in shelf-col */
+.shelf-tracks .track-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  align-items: start;
+  padding: 20px 22px;
+  background: var(--cream);
+  border: 1px solid rgba(62,43,31,0.08);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+.shelf-tracks .track-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(62,43,31,0.08);
+  border-color: rgba(139,111,71,0.45);
+}
+.shelf-tracks .track-card h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--coffee);
+  margin: 0 0 6px;
+  line-height: 1.25;
+}
+.shelf-tracks .track-card p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--coffee-soft);
+  margin: 0;
+}
+.shelf-tracks .track-meta {
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--bronze);
+  margin: 0 0 4px;
+  font-weight: 500;
+}
+.shelf-tracks .track-num {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--bronze);
+  line-height: 1;
+  padding-top: 4px;
+}
+@media (max-width: 820px) {
+  .two-shelves {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }

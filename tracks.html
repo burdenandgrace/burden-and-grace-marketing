@@ -504,21 +504,22 @@
     </div>
   </div>
 </section>
-<!-- ============ THE SHELVES (FOR HIM + FOR HER, 5 EACH) ============ -->
+<!-- ============ THE SHELVES (FOR HIM + FOR HER, side by side, 5 each vertically) ============ -->
 <section class="block">
   <div class="container">
 
-    <!-- For Him row -->
-    <div style="display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; margin-bottom: 8px;">
-      <div>
-        <p class="eyebrow" style="margin-bottom: 4px;">For Him</p>
-        <h2 style="margin-top: 0;">The men's library.</h2>
-      </div>
-      <a href="pricing.html" style="font-size: 14px; color: var(--bronze); text-decoration: underline; margin-bottom: 8px;">All 10 unlock with any membership &rarr;</a>
-    </div>
-    <p class="lead" style="margin-top: 0; margin-bottom: 24px;">Five of the ten 30-day tracks for the weights men carry in silence.</p>
+    <p class="eyebrow center-text" style="text-align: center;">The two libraries</p>
+    <h2 style="text-align: center;">Five of each. <em>All</em> ten unlock with any membership.</h2>
 
-    <div class="track-list">
+    <div class="two-shelves">
+
+      <!-- LEFT: For Him column -->
+      <div class="shelf-col">
+        <div class="shelf-head">
+          <p class="eyebrow" style="margin-bottom: 4px;">For Him</p>
+          <h3>The men's library.</h3>
+        </div>
+        <div class="shelf-tracks">
       <a class="track-card" href="#" data-waitlist="premium_track">
         <span class="track-num">01</span>
         <div>
@@ -559,22 +560,16 @@
           <p>Same roof, different rooms. Thirty days of walking back toward her. Small step by small step, not grand gesture.</p>
         </div>
       </a>
-    </div>
-
-    <!-- Divider -->
-    <div style="margin: 56px auto 40px; max-width: 200px; border-top: 1px solid rgba(139,111,71,0.25);"></div>
-
-    <!-- For Her row -->
-    <div style="display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; margin-bottom: 8px;">
-      <div>
-        <p class="eyebrow" style="margin-bottom: 4px;">For Her</p>
-        <h2 style="margin-top: 0;">The women's library.</h2>
+        </div>
       </div>
-      <a href="pricing.html" style="font-size: 14px; color: var(--bronze); text-decoration: underline; margin-bottom: 8px;">All 10 unlock with any membership &rarr;</a>
-    </div>
-    <p class="lead" style="margin-top: 0; margin-bottom: 24px;">Five of the ten 30-day tracks for the weights women carry, written by a woman.</p>
 
-    <div class="track-list">
+      <!-- RIGHT: For Her column -->
+      <div class="shelf-col">
+        <div class="shelf-head">
+          <p class="eyebrow" style="margin-bottom: 4px;">For Her</p>
+          <h3>The women's library.</h3>
+        </div>
+        <div class="shelf-tracks">
       <a class="track-card" href="#" data-waitlist="premium_track_her">
         <span class="track-num">01</span>
         <div>
@@ -615,7 +610,10 @@
           <p>The roommate season. The slow drift. Thirty days with the third strand of the cord who has been holding it the whole time.</p>
         </div>
       </a>
-    </div>
+        </div>
+      </div>
+
+    </div><!-- /.two-shelves -->
 
   </div>
 </section>
@@ -663,26 +661,4 @@
 <footer class="site-footer">
   <div class="container">
     <a class="foot-brand" href="index.html">
-      <svg class="brand-mark" viewBox="0 0 400 400" aria-hidden="true">
-        <g stroke="#C9A84C" fill="none" stroke-linejoin="round" stroke-linecap="round">
-          <path d="M 108 218 L 172 88 L 197 155" stroke-width="14"/>
-          <path d="M 197 155 L 220 58 L 277 200" stroke-width="14"/>
-          <line x1="220" y1="20" x2="220" y2="62" stroke-width="11"/>
-          <line x1="207" y1="34" x2="233" y2="34" stroke-width="11"/>
-        </g>
-        <g transform="translate(60 130)">
-          <path d="M 218 70 A 105 105 0 1 0 218 210 L 218 150 L 140 150" stroke="#C9A84C" stroke-width="18" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        </g>
-      </svg>
-      <span class="brand-word">BURDEN<span class="amp">&amp;</span>GRACE</span>
-    </a>
-    <div class="foot-links">
-      <a href="tracks.html">Tracks</a>
-      <a href="about.html">About</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="mailto:support@burdenandgrace.com">Contact</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-    </div>
-    <p class="foot-copy">&copy; 2026 Burden &amp; Grace.<br/>Built for men who are weary.</p>
-  </div>
+      <svg class="brand-mark" viewBox
