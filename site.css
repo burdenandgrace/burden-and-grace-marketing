@@ -387,9 +387,20 @@ footer.site-footer .container {
 /* ============================================================
    For Him / For Her diptych section (homepage)
    ============================================================ */
-.center-text { text-align: center; }
+.center-text { text-align: center !important; }
 
-.diptych .lead { max-width: 640px; margin-left: auto; margin-right: auto; margin-bottom: 48px; }
+/* Make the diptych intro section center everything by default */
+.diptych .eyebrow,
+.diptych h2,
+.diptych-intro {
+  text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+.diptych-intro {
+  max-width: 640px;
+  margin-bottom: 48px;
+}
 
 .diptych-grid {
   display: grid;
