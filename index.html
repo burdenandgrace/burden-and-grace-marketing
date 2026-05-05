@@ -435,6 +435,32 @@
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 14px;
   }
+  .tracks.tracks-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .shelf-head {
+    margin-bottom: 16px;
+  }
+  .shelf-head h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--coffee);
+    margin: 0;
+    line-height: 1.2;
+  }
+  .two-shelves {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 8px;
+    align-items: start;
+  }
+  @media (max-width: 800px) {
+    .two-shelves { grid-template-columns: 1fr; gap: 32px; }
+  }
   .track {
     background: var(--cream);
     border: 1px solid rgba(62,43,31,0.1);
@@ -901,14 +927,14 @@
 <section class="block alt shelf">
   <div class="container">
     <p class="eyebrow">The tracks</p>
-    <h2>Ten struggles. One at a time.</h2>
-    <p class="lead">Start with the free 10-day track that names the ten struggles most men carry in silence. When one of them hits close to home, walk the 30-day version.</p>
+    <h2>Twenty tracks. <em>Two</em> libraries.</h2>
+    <p class="lead">Ten 30-day tracks for him. Ten for her. Each is a 30-day walk through one specific weight. Start with the free 10-day Silent Struggles track, then walk whichever 30-day track hits closest to home.</p>
 
     <div class="free-track">
       <div class="free-track-meta">
         <span class="free-tag">Start here. Free.</span>
         <h3>Silent Struggles</h3>
-        <p>Ten days. Ten weights you've probably carried alone. A short daily reading, one verse, space to write. No card. Free to start.</p>
+        <p>Ten days. Ten weights most men and women carry and rarely say out loud. A short daily reading, one verse, space to write. No card. Free to start.</p>
         <a class="cta" href="#" data-waitlist="free_track">Begin the 10-day free track</a>
       </div>
       <div class="free-track-visual" aria-hidden="true">
@@ -919,20 +945,39 @@
       </div>
     </div>
 
-    <p class="shelf-divider">With a membership, the full shelf opens.</p>
-    <div class="tracks">
-      <a class="track" href="tracks.html"><small>Track 01 &middot; 30 days</small>Carrying the Weight All Alone</a>
-      <a class="track" href="tracks.html"><small>Track 02 &middot; 30 days</small>Anger Under Pressure</a>
-      <a class="track" href="tracks.html"><small>Track 03 &middot; 30 days</small>Money Stress and Never Enough</a>
-      <a class="track" href="tracks.html"><small>Track 04 &middot; 30 days</small>Surrounded by People, Known by None</a>
-      <a class="track" href="tracks.html"><small>Track 05 &middot; 30 days</small>Physically Present, Emotionally Gone</a>
-      <a class="track" href="tracks.html"><small>Track 06 &middot; 30 days</small>Fatherhood and Failing</a>
-      <a class="track" href="tracks.html"><small>Track 07 &middot; 30 days</small>The Failure You Keep Replaying</a>
-      <a class="track" href="tracks.html"><small>Track 08 &middot; 30 days</small>Hidden Sin, Shame, and Secrets</a>
-      <a class="track" href="tracks.html"><small>Track 09 &middot; 30 days</small>Distance in Marriage</a>
-      <a class="track" href="tracks.html"><small>Track 10 &middot; 30 days</small>Spiritually Inconsistent and Stuck</a>
+    <p class="shelf-divider">With a membership, the full shelves open.</p>
+    <div class="two-shelves">
+      <div class="shelf-col">
+        <div class="shelf-head">
+          <p class="eyebrow" style="margin-bottom: 4px;">For Him</p>
+          <h3>The men's library.</h3>
+        </div>
+        <div class="tracks tracks-vertical">
+          <a class="track" href="tracks.html"><small>Track 01 &middot; 30 days</small>Carrying the Weight All Alone</a>
+          <a class="track" href="tracks.html"><small>Track 02 &middot; 30 days</small>Anger Under Pressure</a>
+          <a class="track" href="tracks.html"><small>Track 06 &middot; 30 days</small>Fatherhood and Failing</a>
+          <a class="track" href="tracks.html"><small>Track 07 &middot; 30 days</small>The Failure You Keep Replaying</a>
+          <a class="track" href="tracks.html"><small>Track 09 &middot; 30 days</small>Distance in Marriage</a>
+        </div>
+      </div>
+      <div class="shelf-col">
+        <div class="shelf-head">
+          <p class="eyebrow" style="margin-bottom: 4px;">For Her</p>
+          <h3>The women's library.</h3>
+        </div>
+        <div class="tracks tracks-vertical">
+          <a class="track" href="tracks.html"><small>Track 01 &middot; 30 days</small>Carrying Everyone's Plate</a>
+          <a class="track" href="tracks.html"><small>Track 02 &middot; 30 days</small>Anger Under the Smile</a>
+          <a class="track" href="tracks.html"><small>Track 03 &middot; 30 days</small>Never Enough</a>
+          <a class="track" href="tracks.html"><small>Track 05 &middot; 30 days</small>The Mother Tired of Mothering</a>
+          <a class="track" href="tracks.html"><small>Track 08 &middot; 30 days</small>The Marriage You're Doing Alone</a>
+        </div>
+      </div>
     </div>
-    <p class="shelf-fine">Plus a fresh daily devotional every day of the year. One subscription unlocks everything.</p>
+    <p class="shelf-fine" style="text-align: center; margin-top: 28px;">All twenty tracks unlock with any membership. Plus a fresh daily devotional every day of the year.</p>
+    <div class="cta-row" style="justify-content: center; margin-top: 18px;">
+      <a class="cta secondary" href="tracks.html">See all twenty tracks</a>
+    </div>
   </div>
 </section>
 
