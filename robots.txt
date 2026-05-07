@@ -6,6 +6,7 @@
 
 User-agent: *
 Allow: /
+Disallow: /cdn-cgi/
 
 # Point every crawler at the sitemap so they can discover all pages quickly
 Sitemap: https://burdenandgrace.com/sitemap.xml
