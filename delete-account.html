@@ -21,6 +21,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
 <style>
+  /* ===== Legal page type — match privacy.html ===== */
   .legal .effective {
     font-size: 13px;
     letter-spacing: 0.14em;
@@ -88,10 +89,20 @@
 </head>
 <body>
 
-<!-- ============ NAV ============ -->
+<!-- ============ NAV — matches privacy.html exactly ============ -->
 <nav class="site-nav">
-  <a href="/" class="brand">
-    <img src="favicon.svg" alt="" class="brand-mark" />
+  <a class="brand" href="index.html">
+    <svg class="brand-mark" viewBox="0 0 400 400" aria-hidden="true">
+      <g stroke="#C9A84C" fill="none" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M 108 218 L 172 88 L 197 155" stroke-width="14"/>
+        <path d="M 197 155 L 220 58 L 277 200" stroke-width="14"/>
+        <line x1="220" y1="20" x2="220" y2="62" stroke-width="11"/>
+        <line x1="207" y1="34" x2="233" y2="34" stroke-width="11"/>
+      </g>
+      <g transform="translate(60 130)">
+        <path d="M 218 70 A 105 105 0 1 0 218 210 L 218 150 L 140 150" stroke="#C9A84C" stroke-width="18" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </svg>
     <span class="brand-word">BURDEN<span class="amp">&amp;</span>GRACE</span>
   </a>
   <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
@@ -125,7 +136,7 @@
 
     <p class="intro">This page explains how to request deletion of your Burden &amp; Grace account, what we delete, what we keep, and how long it takes. If you have any questions, contact us at <a href="mailto:support@burdenandgrace.com">support@burdenandgrace.com</a>.</p>
 
-    <!-- ===== STEPS TO REQUEST DELETION (PROMINENTLY FEATURED) ===== -->
+    <!-- ===== STEPS TO REQUEST DELETION ===== -->
     <div class="request-box">
       <h3>How to request account deletion</h3>
       <p><strong>To request that we delete your Burden &amp; Grace account and associated data, follow these steps:</strong></p>
@@ -185,21 +196,36 @@
   </div>
 </section>
 
-<!-- ============ FOOTER ============ -->
+<!-- ============ FOOTER — matches privacy.html exactly ============ -->
 <footer class="site-footer">
   <div class="container">
-    <p class="footer-brand">BURDEN<span class="amp">&amp;</span>GRACE</p>
-    <nav class="footer-nav">
+    <a class="foot-brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 400 400" aria-hidden="true">
+        <g stroke="#C9A84C" fill="none" stroke-linejoin="round" stroke-linecap="round">
+          <path d="M 108 218 L 172 88 L 197 155" stroke-width="14"/>
+          <path d="M 197 155 L 220 58 L 277 200" stroke-width="14"/>
+          <line x1="220" y1="20" x2="220" y2="62" stroke-width="11"/>
+          <line x1="207" y1="34" x2="233" y2="34" stroke-width="11"/>
+        </g>
+        <g transform="translate(60 130)">
+          <path d="M 218 70 A 105 105 0 1 0 218 210 L 218 150 L 140 150" stroke="#C9A84C" stroke-width="18" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+      </svg>
+      <span class="brand-word">BURDEN<span class="amp">&amp;</span>GRACE</span>
+    </a>
+    <div class="foot-links">
       <a href="tracks.html">Tracks</a>
       <a href="about.html">About</a>
       <a href="pricing.html">Pricing</a>
+      <a href="mailto:support@burdenandgrace.com">Contact</a>
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
-    </nav>
-    <p class="copyright">© 2026 Burden &amp; Grace, LLC. Built for the men and women who are weary.</p>
+    </div>
+    <p class="foot-copy">&copy; 2026 Burden &amp; Grace.<br/>Built for men who are weary.</p>
   </div>
 </footer>
 
-<script src="site.js"></script>
+<script src="site.js" defer></script>
+
 </body>
 </html>
